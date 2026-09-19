@@ -2,7 +2,7 @@
   "name": "BarberGo Kasflow",
   "short_name": "Kasflow",
   "description": "Aplikasi kasir dan manajemen barbershop dari BarberGo.",
-  "start_url": "/kasflow/",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0B2FD1",
