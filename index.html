@@ -1,72 +1,243 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>  
- <meta charset="UTF-8">  
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">   <!-- =========================  
-     BASIC SEO  
-========================= -->   <title>BarberGo Kasflow — Aplikasi Kasir Barbershop</title>   <meta name="description" content="BarberGo Kasflow adalah aplikasi kasir barbershop untuk mengelola transaksi, layanan, produk, capster, laporan penjualan, dan operasional barbershop dengan lebih praktis.">   <meta name="keywords" content="BarberGo Kasflow, aplikasi kasir barbershop, POS barbershop, kasir barbershop, software barbershop, sistem kasir barber, aplikasi POS barber, manajemen barbershop, laporan barbershop">   <meta name="author" content="BarberGo">  
- <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">   <meta name="theme-color" content="#0B2FD1">  
- <meta name="color-scheme" content="light">   <!-- Canonical -->   <link rel="canonical" href="https://kasflow.barbergo.world/">   <!-- =========================  
-     FAVICON  
-========================= -->   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">  
- <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">  
- <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">   <!-- Optional manifest -->   <link rel="manifest" href="/site.webmanifest">   <!-- =========================  
-     OPEN GRAPH  
-========================= -->   <meta property="og:type" content="website">  
- <meta property="og:site_name" content="BarberGo Kasflow">  
- <meta property="og:title" content="BarberGo Kasflow — Aplikasi Kasir Barbershop">  
- <meta property="og:description" content="Sistem kasir dan manajemen barbershop untuk transaksi, layanan, produk, capster, dan laporan bisnis.">  
- <meta property="og:url" content="https://kasflow.barbergo.world/">  
- <meta property="og:image" content="https://kasflow.barbergo.world/og-image.png">  
- <meta property="og:image:alt" content="BarberGo Kasflow — Aplikasi Kasir Barbershop">  
- <meta property="og:locale" content="id_ID">   <!-- =========================  
-     TWITTER / X  
-========================= -->   <meta name="twitter:card" content="summary_large_image">  
- <meta name="twitter:title" content="BarberGo Kasflow — Aplikasi Kasir Barbershop">  
- <meta name="twitter:description" content="Aplikasi POS dan manajemen barbershop untuk mengelola transaksi, capster, layanan, produk, dan laporan.">  
- <meta name="twitter:image" content="https://kasflow.barbergo.world/og-image.png">   <!-- =========================  
-     PWA  
-========================= -->   
- <meta name="google-site-verification" content="QwLAwT7M0dPJ-u4pCs7iHDW_7LI-YO2EdKtEezvcZZk" />
- 
- <meta name="mobile-web-app-capable" content="yes">  
- <meta name="apple-mobile-web-app-capable" content="yes">  
- <meta name="apple-mobile-web-app-status-bar-style" content="default">  
- <meta name="apple-mobile-web-app-title" content="Kasflow">   <!-- =========================  
-     FONTS  
-========================= -->   <link rel="preconnect" href="https://fonts.googleapis.com">  
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">   <!-- =========================  
-     ICONS  
-========================= -->   <script src="https://unpkg.com/lucide@latest"></script>   <!-- =========================  
-     QR CODE  
-========================= -->   <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>   <!-- =========================  
-     FIREBASE  
-========================= -->   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>   <!-- =========================  
-     STRUCTURED DATA  
-========================= -->   <script type="application/ld+json">  
-  {  
-   "@context": "https://schema.org",  
-   "@type": "SoftwareApplication",  
-   "name": "BarberGo Kasflow",  
-   "alternateName": "Kasflow",  
-   "applicationCategory": "BusinessApplication",  
-   "applicationSubCategory": "Point of Sale",  
-   "operatingSystem": "Web",  
-   "description": "Aplikasi kasir dan manajemen barbershop untuk mengelola transaksi, layanan, produk, capster, dan laporan bisnis.",  
-   "url": "https://www.barbergo.world/",  
-   "image": "https://kasflow.barbergo.world/og-image.png",  
-   "brand": {  
-    "@type": "Br:and",  
-    "name": "BarberGo"  
-   },  
-   "publisher": {  
-    "@type": "Organization",  
-    "name": "BarberGo",  
-    "url": "https://kasflow.barbergo.world/"  
-   }  
-  }  
- </script> 
- 
+<head>
+  <meta charset="UTF-8">
+
+  <!-- =========================
+       VIEWPORT
+  ========================= -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
+  >
+
+  <!-- =========================
+       BASIC SEO
+  ========================= -->
+  <title>BarberGo Kasflow — Aplikasi Kasir Barbershop</title>
+
+  <meta
+    name="description"
+    content="BarberGo Kasflow adalah aplikasi kasir barbershop untuk mengelola transaksi, layanan, produk, capster, laporan penjualan, dan operasional barbershop dengan lebih praktis."
+  >
+
+  <meta
+    name="keywords"
+    content="BarberGo Kasflow, aplikasi kasir barbershop, POS barbershop, kasir barbershop, software barbershop, sistem kasir barber, aplikasi POS barber, manajemen barbershop, laporan barbershop"
+  >
+
+  <meta name="author" content="BarberGo">
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  >
+
+  <meta name="theme-color" content="#0B2FD1">
+  <meta name="color-scheme" content="light">
+
+  <!-- =========================
+       CANONICAL
+  ========================= -->
+  <link
+    rel="canonical"
+    href="https://kasflow.barbergo.world/"
+  >
+
+  <!-- =========================
+       FAVICON
+  ========================= -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/favicon.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/favicon.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/favicon.png"
+  >
+
+  <!-- =========================
+       PWA
+  ========================= -->
+  <link
+    rel="manifest"
+    href="/site.webmanifest"
+  >
+
+  <meta
+    name="mobile-web-app-capable"
+    content="yes"
+  >
+
+  <meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+  >
+
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="default"
+  >
+
+  <meta
+    name="apple-mobile-web-app-title"
+    content="Kasflow"
+  >
+
+  <!-- =========================
+       OPEN GRAPH
+  ========================= -->
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:site_name"
+    content="BarberGo Kasflow"
+  >
+
+  <meta
+    property="og:title"
+    content="BarberGo Kasflow — Aplikasi Kasir Barbershop"
+  >
+
+  <meta
+    property="og:description"
+    content="Sistem kasir dan manajemen barbershop untuk transaksi, layanan, produk, capster, dan laporan bisnis."
+  >
+
+  <meta
+    property="og:url"
+    content="https://kasflow.barbergo.world/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://kasflow.barbergo.world/og-image.png"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="BarberGo Kasflow — Aplikasi Kasir Barbershop"
+  >
+
+  <meta
+    property="og:locale"
+    content="id_ID"
+  >
+
+  <!-- =========================
+       TWITTER / X
+  ========================= -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="BarberGo Kasflow — Aplikasi Kasir Barbershop"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Aplikasi POS dan manajemen barbershop untuk mengelola transaksi, capster, layanan, produk, dan laporan."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://kasflow.barbergo.world/og-image.png"
+  >
+
+  <!-- =========================
+       FONTS
+  ========================= -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- =========================
+       ICONS
+  ========================= -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- =========================
+       QR CODE
+  ========================= -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"
+  ></script>
+
+  <!-- =========================
+       FIREBASE
+  ========================= -->
+  <script
+    src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"
+  ></script>
+
+  <script
+    src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"
+  ></script>
+
+  <script
+    src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"
+  ></script>
+
+  <script
+    src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"
+  ></script>
+
+  <!-- =========================
+       STRUCTURED DATA / JSON-LD
+  ========================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BarberGo Kasflow",
+    "alternateName": "Kasflow",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Point of Sale",
+    "operatingSystem": "Web",
+    "description": "Aplikasi kasir dan manajemen barbershop untuk mengelola transaksi, layanan, produk, capster, dan laporan bisnis.",
+    "url": "https://kasflow.barbergo.world/",
+    "image": "https://kasflow.barbergo.world/og-image.png",
+    "brand": {
+      "@type": "Brand",
+      "name": "BarberGo"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BarberGo",
+      "url": "https://kasflow.barbergo.world/"
+    }
+  }
+  </script>
+
 <style>
 :root{--blue:#0B2FD1;--blue2:#2563EB;--bluesoft:#E8F0FF;--bk:#0F172A;--bg:#F8FAFC;--card:#FFFFFF;--tx:#0F172A;--tx2:#64748B;--tx3:#94A3B8;--bd:#E2E8F0;--line:#EDF2F7;--hov:#F1F5F9;--hov2:#F8FAFC;--soft:#F1F5F9;--soft2:#F1F5F9;--soft3:#F1F5F9;--input:#FFFFFF;--selbg:#E8F0FF;--gr:#16A34A;--wn:#F59E0B;--dn:#EF4444;--r:14px;--sh:0 1px 3px rgba(15,23,42,.05)}
 body.dark{--bg:#0A1020;--card:#0F172A;--tx:#F1F5F9;--tx2:#94A3B8;--tx3:#64748B;--bd:#1E293B;--line:#182338;--hov:#16213A;--hov2:#111A30;--soft:#16213A;--soft2:#1E293B;--soft3:#111A30;--input:#0B1322;--selbg:rgba(37,99,235,.2);--sh:0 1px 3px rgba(0,0,0,.5)}
@@ -108,6 +279,13 @@ a{color:inherit;text-decoration:none}
 .b-gold{background:var(--selbg);color:var(--blue)}
 body.dark .b-gold{color:#93B4FF}
 .b-slv,.b-gray{background:var(--soft2);color:var(--tx2)}
+.b-bronze{background:rgba(180,83,9,.12);color:#B45309}
+.b-goldm{background:rgba(217,119,6,.15);color:#B45309}
+body.dark .b-goldm{color:#F59E0B}
+.b-plat{background:rgba(100,116,139,.16);color:#475569}
+body.dark .b-plat{color:#CBD5E1}
+.b-black{background:#0F172A;color:#fff}
+body.dark .b-black{background:#334155}
 .chip{border:1px solid var(--bd);background:var(--card);border-radius:99px;padding:7px 14px;font-size:12px;font-weight:600;color:var(--tx2);transition:.15s}
 .chip:hover{color:var(--tx)}
 .chip.on{background:var(--blue);color:#fff;border-color:var(--blue)}
@@ -340,10 +518,10 @@ body.dark .ctip{background:#1E293B;border:1px solid var(--bd)}
 .sumtot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--bd);margin-top:10px;padding-top:12px}
 .sumtot span{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--tx3)}
 .sumtot b{font:700 24px 'Plus Jakarta Sans',Inter,sans-serif;letter-spacing:-.02em;color:var(--tx)}
-.pm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .pm{border:1px solid var(--bd);border-radius:10px;padding:13px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--tx2);transition:.15s;background:var(--card)}
 .pm:hover{border-color:var(--tx3)}
 .pm.on{border-color:var(--blue);background:var(--selbg);color:var(--blue)}
+.pm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .cashq{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .cashq button{border:1px solid var(--bd);border-radius:8px;padding:6px 12px;font-size:11.5px;font-weight:600;color:var(--tx2)}
 .cashq button:hover{border-color:var(--blue);color:var(--blue)}
@@ -363,11 +541,13 @@ body.dark .ctip{background:#1E293B;border:1px solid var(--bd)}
 .qtk .no{font-family:'JetBrains Mono';font-size:26px;font-weight:700;line-height:1;color:var(--blue)}
 .qtk .tot{font-family:'JetBrains Mono';font-size:12.5px;font-weight:700}
 .qtk .stub .btn{width:100%}
-.chat-wrap{display:grid;grid-template-columns:340px 1fr;gap:16px;height:calc(100vh - 64px - 48px);min-height:480px}
+/* ================= CHAT ================= */
+.chat-wrap{display:grid;grid-template-columns:340px 1fr;gap:16px;height:calc(100vh - 112px);min-height:480px}
+@supports(height:100dvh){.chat-wrap{height:calc(100dvh - 112px)}}
 .chat-list{display:flex;flex-direction:column;min-height:0}
 .cl-head{padding:14px 14px 10px;border-bottom:1px solid var(--bd)}
 .cl-scroll{flex:1;overflow-y:auto;padding:6px}
-.conv{display:flex;align-items:center;gap:11px;width:100%;text-align:left;padding:10px;border-radius:10px;transition:.12s}
+.conv{display:flex;align-items:center;gap:11px;width:100%;text-align:left;padding:10px;border-radius:10px;transition:.12s;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
 .conv:hover{background:var(--hov)}
 .conv.active{background:var(--selbg)}
 .conv .cin{flex:1;min-width:0}
@@ -377,17 +557,38 @@ body.dark .ctip{background:#1E293B;border:1px solid var(--bd)}
 .conv .r2{display:flex;justify-content:space-between;gap:8px;align-items:center}
 .conv .pv{font-size:11.5px;color:var(--tx2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .unb{min-width:17px;height:17px;border-radius:99px;background:var(--blue);color:#fff;font-size:9.5px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;padding:0 5px;flex:none}
-.chat-room{display:flex;flex-direction:column;min-height:0}
-.cr-head{display:flex;align-items:center;gap:11px;padding:12px 16px;border-bottom:1px solid var(--bd);flex:none}
-.msgs{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:8px;background:var(--hov2)}
+.chat-room{display:flex;flex-direction:column;min-height:0;overflow:hidden;position:relative}
+/* ★ v3.7: Header terpisah — berdiri sendiri di atas .msgs, tetap ada saat pesan discroll */
+.cr-head{display:flex;align-items:center;gap:11px;padding:12px 16px;flex:none;background:var(--card);border-bottom:1px solid var(--bd);position:relative;z-index:8;box-shadow:0 2px 12px rgba(15,23,42,.07)}
+/* ★ v3.7: padding-bottom 92px → pesan terbaru berhenti DI ATAS floating input */
+.msgs{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;padding:18px 18px 92px;display:flex;flex-direction:column;gap:8px;background:var(--hov2)}
 .bub{max-width:72%;padding:9px 13px;border-radius:12px;font-size:12.5px;line-height:1.45;width:fit-content}
 .bub.me{align-self:flex-end;background:var(--blue);color:#fff;border-bottom-right-radius:4px}
 .bub.cust{align-self:flex-start;background:var(--card);border:1px solid var(--bd);border-bottom-left-radius:4px}
-.bub .bt{display:block;font-size:9.5px;opacity:.55;margin-top:3px;text-align:right}
-.chat-inp{display:flex;gap:10px;padding:12px;border-top:1px solid var(--bd);flex:none}
-.chat-inp input{flex:1}
+/* ★ v3.7: Jam per bubble — tegas di kanan bawah gelembung */
+.bub .bt{display:flex;align-items:center;justify-content:flex-end;gap:4px;font-family:'JetBrains Mono';font-size:10px;font-weight:600;margin-top:4px;opacity:.9}
+.bub.me .bt{color:rgba(255,255,255,.92)}
+.bub.cust .bt{color:var(--tx3)}
+/* ★ v3.7: Input = floating navbar — absolute di dalam room, melayang di atas pesan,
+   tidak pernah ikut scroll, tetap dalam batas room (desktop & mobile) */
+.chat-inp{position:absolute;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:9;display:flex;align-items:center;gap:6px;padding:6px 6px 6px 16px;background:var(--card);border:1px solid var(--bd);border-radius:999px;box-shadow:0 10px 30px rgba(15,23,42,.22)}
+.chat-inp input{flex:1;min-width:0;font-size:16px;background:transparent;border:none!important;box-shadow:none!important;padding:9px 6px}
+.chat-inp input:disabled{opacity:.55}
+.chat-inp .send-btn{width:42px;height:42px;border-radius:50%;padding:0;flex:none}
 .chat-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--tx3);gap:10px;height:100%;text-align:center}
-.cr-back{display:none}
+/* ★ v3.7: Tombol kembali aktif di desktop & mobile */
+.cr-back{display:inline-flex}
+/* ★ v3.7: Typing indicator jadi pill melayang di atas floating input */
+.typing{display:none;position:absolute;left:16px;bottom:calc(74px + env(safe-area-inset-bottom,0px));z-index:9;align-items:center;gap:8px;padding:6px 13px;font-size:11px;color:var(--tx2);background:var(--card);border:1px solid var(--bd);border-radius:99px;box-shadow:0 6px 18px rgba(15,23,42,.14)}
+.typing.on{display:flex}
+.tdots{display:inline-flex;gap:3px}
+.tdots i{width:5px;height:5px;border-radius:50%;background:var(--blue);animation:tdb 1.2s infinite}
+.tdots i:nth-child(2){animation-delay:.15s}
+.tdots i:nth-child(3){animation-delay:.3s}
+@keyframes tdb{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+/* ★ v3.7: Pill "pesan terbaru" di atas floating input */
+.msg-pill{position:absolute;bottom:calc(112px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);z-index:9;display:none;align-items:center;gap:5px;background:var(--blue);color:#fff;font-size:11px;font-weight:700;padding:7px 14px;border-radius:99px;box-shadow:0 6px 18px rgba(11,47,209,.4)}
+.msg-pill svg{width:13px;height:13px}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
 .cal-dow{font-size:10px;text-align:center;color:var(--tx3);font-weight:700;padding:4px 0}
 .cal-cell{aspect-ratio:1;border-radius:8px;font-size:12px;font-weight:600;color:var(--tx2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:1px solid transparent;transition:.12s;font-family:'JetBrains Mono'}
@@ -415,11 +616,11 @@ body.dark .ctip{background:#1E293B;border:1px solid var(--bd)}
 .gal-add:hover{border-color:var(--blue);color:var(--blue)}
 .photopick{width:78px;height:78px;border-radius:50%;border:1.5px dashed var(--tx3);display:flex;align-items:center;justify-content:center;color:var(--tx3);overflow:hidden;cursor:pointer;transition:.15s;flex:none;position:relative}
 .photopick:hover{border-color:var(--blue)}
-.photopick img{width:100%;height:100%;object-fit:cover}
-.rcLogoBox{width:130px;height:64px;border:1.5px dashed var(--tx3);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:var(--tx3);font-size:10.5px;font-weight:600;cursor:pointer;overflow:hidden;transition:.15s;flex:none;background:var(--hov2)}
+.photopick img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rcLogoBox{width:130px;height:64px;border:1.5px dashed var(--tx3);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:var(--tx3);font-size:10.5px;font-weight:600;cursor:pointer;overflow:hidden;transition:.15s;flex:none;background:var(--hov2);position:relative}
 .rcLogoBox:hover{border-color:var(--blue);color:var(--blue)}
-.rcLogoBox img{max-width:100%;max-height:100%;object-fit:contain;padding:6px}
-.upspin{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(15,23,42,.5);color:#fff;font-size:11.5px;font-weight:600;z-index:3}
+.rcLogoBox img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px}
+.upspin{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(15,23,42,.55);color:#fff;font-size:11.5px;font-weight:600;z-index:3;border-radius:inherit}
 .mapbox{border-radius:12px;overflow:hidden;border:1px solid var(--bd);height:220px}
 .mapbox iframe{width:100%;height:100%;border:0;filter:grayscale(.3)}
 body.dark .mapbox iframe{filter:grayscale(.6) invert(.9) hue-rotate(180deg)}
@@ -433,7 +634,6 @@ body.dark .mapbox iframe{filter:grayscale(.6) invert(.9) hue-rotate(180deg)}
 .setrow .in small{font-size:11.5px;color:var(--tx2)}
 .settabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:16px;scrollbar-width:none}
 .settabs::-webkit-scrollbar{display:none}
-/* booking rows & detail */
 .bk-row{display:flex;gap:14px;align-items:center;padding:13px 6px;border-bottom:1px solid var(--line);cursor:pointer;border-radius:10px;transition:background .12s}
 .bk-row:hover{background:var(--hov)}
 .bk-row:last-child{border-bottom:none}
@@ -452,6 +652,51 @@ body.dark .mapbox iframe{filter:grayscale(.6) invert(.9) hue-rotate(180deg)}
 .pR.t{font-weight:700;font-size:12.5px}
 #printArea{display:none}
 @media print{#app,#landing,#pushStack,#modalRoot,#scrim,#drawerR{display:none!important}#printArea{display:block!important}#printArea .paper{border:none}}
+/* ================= MEMBERSHIP ================= */
+.memcard{display:flex;flex-direction:column;transition:.15s}
+.memcard:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(15,23,42,.10)}
+.memfeat{list-style:none;margin:10px 0 0;padding:0;flex:1}
+.memfeat li{font-size:11.5px;color:var(--tx2);padding:3px 0 3px 18px;position:relative}
+.memfeat li::before{content:'✓';position:absolute;left:0;top:2px;color:var(--gr);font-weight:800;font-size:11px}
+/* ================= PAYMENT SETTINGS ================= */
+.pmImgBox{width:150px;height:150px;border:1.5px dashed var(--tx3);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--tx3);font-size:11px;font-weight:600;cursor:pointer;overflow:hidden;position:relative;background:var(--hov2);flex:none;transition:.15s}
+.pmImgBox:hover{border-color:var(--blue);color:var(--blue)}
+.pmImgBox img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:8px;background:#fff}
+.pmImgBox.has-img{border-style:solid;border-color:var(--bd)}
+.tracc{display:flex;align-items:center;gap:10px;border:1px solid var(--bd);border-radius:10px;padding:10px 12px;margin-bottom:8px}
+.tracc b{font-size:12.5px;display:block}
+/* ================= CHAT PATCH: lock + keyboard + ctx + eye ================= */
+body.chat-lock{overflow:hidden}
+body.chat-lock .chat-wrap{height:calc(100vh - 64px);min-height:0}
+@supports(height:100dvh){body.chat-lock .chat-wrap{height:calc(100dvh - 64px)}}
+/* KEYBOARD TERBUKA → room fullscreen mengikuti visualViewport (floating input selalu di atas keyboard) */
+body.kb-on{overflow:hidden}
+body.kb-on .chat-list{display:none}
+body.kb-on .chat-wrap{display:block;height:auto}
+body.kb-on .chat-room{position:fixed;left:0;right:0;top:0;height:var(--vvh,100vh)!important;transform:translateY(var(--vvoff,0px));z-index:92;background:var(--card);border:none;border-radius:0}
+/* Status diblokir */
+.chat-room.blocked .chat-inp{display:none}
+.blocked-bar{display:flex;align-items:center;gap:8px;padding:9px 16px;background:rgba(239,68,68,.08);color:var(--dn);font-size:11.5px;font-weight:600;border-bottom:1px solid var(--bd);flex:none}
+.blocked-bar button{margin-left:auto;font-size:11px;font-weight:700;color:var(--blue);text-decoration:underline}
+.conv.is-blocked{opacity:.55}
+.conv.is-blocked .pv::after{content:" · Diblokir";color:var(--dn);font-weight:700}
+/* Menu konteks long-press */
+.ctx{position:fixed;z-index:210;background:var(--card);border:1px solid var(--bd);border-radius:12px;box-shadow:0 14px 40px rgba(15,23,42,.22);min-width:215px;overflow:hidden;animation:ddIn .15s ease}
+.ctx .ctx-h{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--tx3);padding:11px 14px 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px}
+.ctx button{display:flex;gap:10px;align-items:center;width:100%;padding:11px 14px;font-size:12.5px;text-align:left;transition:.12s;color:var(--tx)}
+.ctx button:hover{background:var(--hov)}
+.ctx button.red{color:var(--dn)}
+.ctx .sep{height:1px;background:var(--bd)}
+.ctx .cic{display:inline-flex;width:16px;height:16px;flex:none}
+.ctx .cic svg{width:100%;height:100%}
+/* Show/hide password */
+.pwwrap{position:relative}
+.pwwrap input{padding-right:44px}
+.pweye{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--tx3);transition:.12s}
+.pweye:hover{color:var(--blue);background:var(--hov)}
+.pweye svg{width:16px;height:16px}
+.photopick.has-img,.rcLogoBox.has-img{border-style:solid;border-color:var(--bd)}
+#pfBgBox{position:relative;overflow:hidden}
 @media(max-width:1100px){.kpis{grid-template-columns:repeat(2,1fr)}.pos-grid{grid-template-columns:1fr}.orderP{position:static}.chat-wrap{grid-template-columns:300px 1fr}}
 @media(max-width:768px){
  #sidebar{display:none!important}
@@ -479,9 +724,11 @@ body.dark .mapbox iframe{filter:grayscale(.6) invert(.9) hue-rotate(180deg)}
  .chat-wrap{display:block;height:auto}
  .chat-list{margin-bottom:14px;max-height:320px}
  .cl-scroll{max-height:230px}
- .chat-room{height:64vh}
- .cr-back{display:inline-flex}
  #pushStack{right:12px;top:12px}
+ body.chat-lock .chat-wrap{height:calc(100dvh - 96px)}
+ body.chat-lock .chat-list{display:none}
+ body.chat-lock .chat-room{height:100%!important}
+ body.chat-lock #view{padding-bottom:16px}
 }
 </style>
 </head>
@@ -516,7 +763,10 @@ body.dark .mapbox iframe{filter:grayscale(.6) invert(.9) hue-rotate(180deg)}
         <label class="f">Email</label>
         <input id="lgEmail" type="email" placeholder="nama@barbershop.id" autocomplete="email">
         <label class="f">Password</label>
-        <input id="lgPass" type="password" placeholder="Minimal 6 karakter" autocomplete="current-password">
+        <div class="pwwrap">
+          <input id="lgPass" type="password" placeholder="Minimal 6 karakter" autocomplete="current-password">
+          <button type="button" class="pweye" onclick="pwToggle('lgPass',this)" title="Lihat / sembunyikan"><i data-lucide="eye"></i></button>
+        </div>
         <div class="lg-err hide" id="lgErr"><i data-lucide="alert-triangle" style="width:14px;height:14px"></i><span></span></div>
         <button class="btn pri lg" style="margin-top:20px" id="loginBtn" onclick="doLogin()"><i data-lucide="log-in"></i> Masuk</button>
         <p style="font-size:11px;color:var(--tx3);margin-top:14px;text-align:center">Belum punya akun? <a href="#" onclick="landingBack();return false">Daftar via paket di atas</a></p>
@@ -649,6 +899,13 @@ async function cloudUpload(file){
  return j.secure_url;
 }
 const uploading={};
+/* ★ Show/hide password */
+function pwToggle(id,btn){
+ const i=qs('#'+id);if(!i)return;
+ const show=i.type==='password';
+ i.type=show?'text':'password';
+ btn.innerHTML=`<i data-lucide="${show?'eye-off':'eye'}"></i>`;refreshIcons();
+}
 
 /* ================= PUSH / MODAL / DROPDOWN ================= */
 function push(o){
@@ -737,21 +994,21 @@ function escposReceipt(q){
  const rp=v=>'Rp '+Number(v||0).toLocaleString('id-ID');
  const line=(a,b)=>{a=String(a);b=String(b);const sp=Math.max(1,L-a.length-b.length);return a+' '.repeat(sp)+b+'\n'};
  let o='\x1B\x40';
- if(!s.logo)o+='\x1B\x61\x01\x1D\x21\x11\x1B\x45\x01'+esc(rcTitle())+'\x1D\x21\x00\x1B\x45\x00\n';
- o+='\x1B\x61\x01'+esc(s.address||'')+'\n\n\x1B\x61\x00';
- o+=line('No. Order',code(q))+line('Tanggal',tgl)+line('Pelanggan',esc((q.name||'-').split(' ')[0]))+line('Capster',esc(capOf(q.capsterId).name));
+ if(!s.logo)o+='\x1B\x61\x01\x1D\x21\x11\x1B\x45\x01'+rcTitle()+'\x1D\x21\x00\x1B\x45\x00\n';
+ o+='\x1B\x61\x01'+(s.address||'')+'\n\n\x1B\x61\x00';
+ o+=line('No. Order',code(q))+line('Tanggal',tgl)+line('Pelanggan',(q.name||'-').split(' ')[0])+line('Capster',capOf(q.capsterId).name);
  o+='-'.repeat(L)+'\n';
- (q.items||[]).forEach(i=>{o+=esc(i.name)+(i.qty>1?' x'+i.qty:'')+'\n'+line('',(i.price*i.qty).toLocaleString('id-ID'))});
+ (q.items||[]).forEach(i=>{o+=i.name+(i.qty>1?' x'+i.qty:'')+'\n'+line('',(i.price*i.qty).toLocaleString('id-ID'))});
  o+='-'.repeat(L)+'\n\x1B\x45\x01'+line('TOTAL',rp(q.total))+'\x1B\x45\x00';
  o+=line('Bayar ('+((q.method||'cash').toUpperCase())+')',rp(q.received||q.total));
  if((q.method||'cash')==='cash'&&q.change)o+=line('Kembalian',rp(q.change));
- o+='-'.repeat(L)+'\n\x1B\x61\x01'+esc(s.footer||'')+'\n\n\n\x1D\x56\x42\x00';
+ o+='-'.repeat(L)+'\n\x1B\x61\x01'+(s.footer||'')+'\n\n\n\x1D\x56\x42\x00';
  return o;
 }
 async function buildReceiptBytes(q){
  const parts=[];
  if(DB.shop.logo){const logo=await escposLogoBytes(DB.shop.logo,320);
-  if(logo.length){parts.push(logo);parts.push(new TextEncoder().encode('\n\x1B\x61\x01\x1B\x45\x01'+esc(rcTitle())+'\x1B\x45\x00\n\n'))}}
+  if(logo.length){parts.push(logo);parts.push(new TextEncoder().encode('\n\x1B\x61\x01\x1B\x45\x01'+rcTitle()+'\x1B\x45\x00\n\n'))}}
  parts.push(new TextEncoder().encode(escposReceipt(q)));
  return concatBytes(parts);
 }
@@ -769,14 +1026,22 @@ const PLANS=[
  {id:'basic',name:'Basic',dur:'1 Minggu',price:49000,feat:'Kasir & antrian · 1 perangkat · Laporan dasar',tag:''},
  {id:'gold',name:'Gold',dur:'1 Bulan',price:149000,feat:'Semua fitur · Laporan lengkap · 3 perangkat · Chat pelanggan',tag:'PALING LARIS'},
  {id:'pro',name:'Pro',dur:'1 Tahun',price:1199000,feat:'Semua fitur Gold · Export laporan · Multi cabang · Support prioritas',tag:'HEMAT 33%'}];
+const MEM_TIERS=[
+ {id:'bronze',name:'Bronze',color:'b-bronze',pct:5,mo:25000,yr:250000,feat:['Diskon 5% semua transaksi','Poin 1x per transaksi','Notifikasi promo toko']},
+ {id:'gold',name:'Gold',color:'b-goldm',pct:10,mo:49000,yr:490000,feat:['Diskon 10% semua transaksi','Poin 1.5x per transaksi','Prioritas booking online','Voucher minuman tiap 5 kunjungan']},
+ {id:'platinum',name:'Platinum',color:'b-plat',pct:15,mo:99000,yr:990000,feat:['Diskon 15% semua transaksi','Poin 2x per transaksi','Prioritas capster pilihan','1x free haircut per bulan']},
+ {id:'black',name:'Black',color:'b-black',pct:20,mo:199000,yr:1990000,feat:['Diskon 20% semua transaksi','Poin 3x per transaksi','Layanan VIP & private room','Unlimited free haircut','Dedicated capster']}];
+const MEM_PCT={bronze:.05,gold:.10,platinum:.15,black:.20,silver:.05};
+const custPct=c=>c&&MEM_PCT[c.membership]!==undefined?MEM_PCT[c.membership]:0;
+const memBadge=m=>{const t=MEM_TIERS.find(x=>x.id===m);return t?`<span class="badge ${t.color}">${t.name}</span>`:'<span class="badge b-gray">reguler</span>'};
 let DB=null;
-let S={page:'dashboard',period:30,qFilter:'semua',qSearch:'',trxSearch:'',trxFilter:'semua',trxPage:1,custSearch:'',calView:null,calSel:null,chatTid:null,posCat:'svc',bkFilter:'today',setTab:'profil',openGrp:{grpMgmt:true,grpBiz:false}};
+let S={page:'dashboard',period:30,qFilter:'semua',qSearch:'',trxSearch:'',trxFilter:'semua',trxPage:1,custSearch:'',memSearch:'',memCycle:'mo',calView:null,calSel:null,chatTid:null,posCat:'svc',bkFilter:'today',setTab:'profil',openGrp:{grpMgmt:true,grpBiz:false}};
 let CART={cust:null,cap:null,items:[],disc:0};
 let PAYQ=null,PAY={method:'cash'};
 let pendingImg={cap:null,staff:null};
 let editId={cap:null,staff:null,item:null};
 let chosenPlan=null,HIST=[];
-let shopRef=null,unsubShop=null,unsubResv=null,unsubThreads=null,unsubRoom=null;
+let shopRef=null,unsubShop=null,unsubResv=null,unsubThreads=null,unsubRoom=null,unsubRoomMeta=null;
 let suppressUntil=0,saveTimer=null,pendingSave=false;
 const processedResv=new Set();
 
@@ -787,13 +1052,19 @@ function migrateDB(d){
  if(d.shop.title===undefined)d.shop.title='';
  if(d.shop.logo===undefined)d.shop.logo='';
  if(!d.profile)d.profile={name:'Admin',photo:'',bg:'',maps:'',address:'',gallery:[]};
+ /* ★ payment settings */
+ if(!d.payments)d.payments={qris:{on:true,img:''},debit:{on:true,note:''},transfer:{on:true,accounts:[]}};
+ if(!d.payments.qris)d.payments.qris={on:true,img:''};
+ if(!d.payments.debit)d.payments.debit={on:true,note:''};
+ if(!d.payments.transfer)d.payments.transfer={on:true,accounts:[]};
+ if(!Array.isArray(d.payments.transfer.accounts))d.payments.transfer.accounts=[];
  ['customers','capsters','staff','services','products','queue','bookings','expenses','kasbon','chats'].forEach(k=>{if(!Array.isArray(d[k]))d[k]=[]});
  if(!d.seq)d.seq=1000;
  if(!d.notifSeen)d.notifSeen=0;
  if(d.updatedAt===undefined)d.updatedAt=0;
  return d;
 }
-function emptyDB(o){return Object.assign({email:'',plan:'gold',seq:1000,notifSeen:0,planRequests:[],shop:{name:'Barbershop Saya',title:'',logo:'',address:'',footer:'Terima kasih telah berkunjung!',printer:false},profile:{name:'Admin',photo:'',bg:'',maps:'',address:'',gallery:[]},customers:[],capsters:[],staff:[],services:[],products:[],queue:[],bookings:[],expenses:[],kasbon:[],chats:[]},o||{})}
+function emptyDB(o){return Object.assign({email:'',plan:'gold',seq:1000,notifSeen:0,planRequests:[],payments:{qris:{on:true,img:''},debit:{on:true,note:''},transfer:{on:true,accounts:[]}},shop:{name:'Barbershop Saya',title:'',logo:'',address:'',footer:'Terima kasih telah berkunjung!',printer:false},profile:{name:'Admin',photo:'',bg:'',maps:'',address:'',gallery:[]},customers:[],capsters:[],staff:[],services:[],products:[],queue:[],bookings:[],expenses:[],kasbon:[],chats:[]},o||{})}
 function saveLocal(){try{localStorage.setItem('bg_cache_'+(auth.currentUser?auth.currentUser.uid:'x'),JSON.stringify(DB))}catch(e){}}
 function saveDB(){if(!DB)return;DB.updatedAt=Date.now();saveLocal();if(!shopRef)return;clearTimeout(saveTimer);saveTimer=setTimeout(pushShop,500)}
 async function pushShop(){if(!shopRef||!DB)return;suppressUntil=Date.now()+2500;try{await shopRef.set(JSON.parse(JSON.stringify(DB)));pendingSave=false}catch(e){console.warn('Firestore save gagal:',e);pendingSave=true}}
@@ -868,16 +1139,64 @@ function listenChatInbox(){
      }
     }
    });
-   if(first)inboxReadyFlag=true;
    first=false;
-   if(S.page==='chat'&&S.chatTid)renderChatUI();else buildSidebar();
+   if(S.page==='chat')refreshChatListUI();else buildSidebar();
   },err=>console.warn('chat inbox:',err));
 }
-let inboxReadyFlag=false;
+function refreshChatListUI(){
+ buildSidebar();
+ const el=qs('#convList');
+ if(el){el.innerHTML=convListHTML(qv('#chatSearch'));refreshIcons()}
+ const room=qs('#chatRoomPanel'),t=S.chatTid&&CHAT_THREADS[S.chatTid];
+ if(room&&t){
+  room.classList.toggle('blocked',!!t.blocked);
+  const inp=qs('#shopMsg');
+  if(inp){inp.disabled=!!t.blocked;inp.placeholder=t.blocked?'Percakapan diblokir':'Tulis balasan...'}
+ }
+}
+function renderChatUI(){refreshChatListUI()}
+
+/* ★ KEYBOARD via visualViewport: --kbh / --vvoff / --vvh */
+const KBV=window.visualViewport;
+function kbUpdate(){
+ if(S.page!=='chat'||!S.chatTid){document.body.classList.remove('kb-on');return}
+ let kbh=0,voff=0,vh=window.innerHeight;
+ if(KBV){vh=KBV.height;kbh=Math.max(0,Math.round(window.innerHeight-KBV.height-KBV.offsetTop));voff=Math.round(KBV.offsetTop)}
+ const r=document.documentElement.style;
+ r.setProperty('--kbh',kbh+'px');r.setProperty('--vvoff',voff+'px');r.setProperty('--vvh',Math.round(vh)+'px');
+ const on=kbh>110;
+ document.body.classList.toggle('kb-on',on);
+ if(on)requestAnimationFrame(()=>{const b=qs('#msgs');if(b)b.scrollTop=b.scrollHeight});
+}
+if(KBV){KBV.addEventListener('resize',kbUpdate);KBV.addEventListener('scroll',kbUpdate)}
+window.addEventListener('resize',kbUpdate);
+window.addEventListener('orientationchange',()=>setTimeout(kbUpdate,250));
+
+/* ★ LOCK SCROLL: hanya .msgs yang boleh scroll saat room terbuka */
+function updateChatLock(){
+ const on=S.page==='chat'&&!!S.chatTid;
+ document.body.classList.toggle('chat-lock',on);
+ if(!on){
+  document.body.classList.remove('kb-on');
+  if(unsubRoom){unsubRoom();unsubRoom=null}
+  if(unsubRoomMeta){unsubRoomMeta();unsubRoomMeta=null}
+ }
+}
+
+/* ★ BUKA / TUTUP ROOM */
 function openChatRoom(tid){
  S.page='chat';S.chatTid=tid;
  CHAT_SEEN[tid]=Date.now();delete CHAT_UNREAD[tid];saveChatSeen();
- closePanels();render();
+ closePanels();closeChatCtx();
+ render();
+ if(!('ontouchstart' in window))setTimeout(()=>{const i=qs('#shopMsg');i&&!i.disabled&&i.focus()},120);
+}
+function closeChatRoom(){
+ S.chatTid=null;
+ if(unsubRoom){unsubRoom();unsubRoom=null}
+ if(unsubRoomMeta){unsubRoomMeta();unsubRoomMeta=null}
+ document.body.classList.remove('chat-lock','kb-on');
+ render();
 }
 
 /* ================= AUTH & ONBOARDING ================= */
@@ -914,7 +1233,7 @@ function obPage(n){['obPage1','obPage2','obPage3'].forEach((id,i)=>qs('#'+id).cl
 function obNext(){
  if(!qs('#obPage1').classList.contains('hide')){
   const shop=qv('#obShop'),admin=qv('#obAdmin');
-  if(shop.length<2)return toast('Isi nama barbershop dulu.','alert-triangle',true);
+  if(shop.length<2)return toast('Isi nama barbershop dulu ya.','alert-triangle',true);
   if(admin.length<2)return toast('Isi nama admin dulu.','alert-triangle',true);
   OB.shop=shop;OB.admin=admin;OB.addr=qv('#obAddr');OB.plan=qs('#obPlan').value;obPage(2);
  }else if(!qs('#obPage2').classList.contains('hide')){
@@ -1027,6 +1346,7 @@ function askLogout(){
   if(unsubResv){unsubResv();unsubResv=null}
   if(unsubThreads){unsubThreads();unsubThreads=null}
   if(unsubRoom){unsubRoom();unsubRoom=null}
+  if(unsubRoomMeta){unsubRoomMeta();unsubRoomMeta=null}
   btDisconnect();
   try{await auth.signOut()}catch(e){}
   location.reload();
@@ -1124,6 +1444,7 @@ function renderProfileMenu(){
  qs('#profileMenu').innerHTML=`
   <div class="dd-h">${esc(DB.email)}</div>
   <button class="dd-item" onclick="qsa('.dd.open').forEach(x=>x.classList.remove('open'));go('settings')"><i data-lucide="user-round"></i> Profil Saya</button>
+  <button class="dd-item" onclick="qsa('.dd.open').forEach(x=>x.classList.remove('open'));S.setTab='payment';go('settings')"><i data-lucide="wallet"></i> Payment</button>
   <button class="dd-item" onclick="qsa('.dd.open').forEach(x=>x.classList.remove('open'));S.setTab='keamanan';go('settings')"><i data-lucide="shield-check"></i> Keamanan</button>
   <button class="dd-item" onclick="toggleTheme()"><i data-lucide="${dark?'sun':'moon'}"></i> Mode ${dark?'Terang':'Gelap'}</button>
   <div class="dd-sep"></div>
@@ -1223,6 +1544,7 @@ function render(){
  const V=VIEWS[S.page]||VIEWS.dashboard;
  qs('#view').innerHTML=V();
  if(BIND[S.page])BIND[S.page]();
+ updateChatLock();
  buildSidebar();buildHnav();
  refreshIcons();window.scrollTo(0,0);
 }
@@ -1245,13 +1567,13 @@ VIEWS.dashboard=()=>{
  const trx=cur.length,gT=growth(trx,prev.length);
  const avg=trx?Math.round(rev/trx):0;
  const bkToday=DB.bookings.filter(b=>dkey(b.at)===todayKey()).length;
- const byM={qris:0,cash:0,debit:0};cur.forEach(q=>byM[q.method]=(byM[q.method]||0)+q.total);
- const mTot=byM.qris+byM.cash+byM.debit||1;
+ const byM={qris:0,cash:0,debit:0,transfer:0};cur.forEach(q=>byM[q.method]=(byM[q.method]||0)+q.total);
+ const mTot=byM.qris+byM.cash+byM.debit+byM.transfer||1;
  const svc={};cur.forEach(q=>q.items.forEach(i=>{if(i.kind==='svc')svc[i.name]=(svc[i.name]||0)+i.price}));
  const top=Object.entries(svc).sort((a,b)=>b[1]-a[1]).slice(0,4);
  const tTot=top.reduce((a,b)=>a+b[1],0)||1;
  const recent=[...cur].sort((a,b)=>b.paidAt-a.paidAt).slice(0,6);
- const pmCols=[['qris','QRIS','#0B2FD1'],['cash','Cash','#2563EB'],['debit','Debit / Card','#0F172A']];
+ const pmCols=[['qris','QRIS','#0B2FD1'],['cash','Cash','#2563EB'],['debit','Debit','#0F172A'],['transfer','Transfer','#16A34A']];
  const cd=2*Math.PI*54;let off=0;
  const donutSegs=pmCols.map(([k,,col])=>{const frac=byM[k]/mTot;const seg=`<circle r="54" cx="70" cy="70" fill="none" stroke="${col}" stroke-width="16" stroke-dasharray="${(frac*cd-2).toFixed(1)} ${cd}" stroke-dashoffset="${(-off*cd+cd/4).toFixed(1)}"/>`;off+=frac;return seg}).join('');
  const days=chartDays();const series=buildSeries(days);
@@ -1358,7 +1680,6 @@ function trxRowClick(id){const q=DB.queue.find(x=>x.id===id);if(!q)return;if(q.s
 
 /* ---------- POS ---------- */
 const cartSub=()=>CART.items.reduce((a,i)=>a+i.price*i.qty,0);
-const custPct=c=>c&&c.membership==='gold'?.1:c&&c.membership==='silver'?.05:0;
 const cartTotals=()=>{const sub=cartSub();const mem=Math.round(sub*custPct(CART.cust));const disc=Math.min(CART.disc||0,sub-mem);return{sub,mem,disc,total:Math.max(0,sub-mem-disc)}};
 VIEWS.pos=()=>`
  ${pageHead('POS / Kasir','Buat orderan — orderan masuk ke menu Antrian untuk diproses pembayarannya.')}
@@ -1407,7 +1728,7 @@ function posPickCap(id){const c=capOf(id);if(c.status==='off')return toast('Caps
 function posCustSearch(){
  const q=qv('#posCustQ').toLowerCase();
  const res=DB.customers.filter(c=>!q||c.name.toLowerCase().includes(q)||c.phone.includes(q)).slice(0,6);
- qs('#posCustRes').innerHTML=res.length?res.map(c=>`<button class="dd-item" onclick="posSelectCust('${c.id}')">${avatarHTML(c.photo,c.name,28)}<span style="flex:1;min-width:0"><b style="display:block">${esc(c.name)}</b><small style="color:var(--tx2)">${esc(c.phone)}</small></span>${c.membership?`<span class="badge ${c.membership==='gold'?'b-gold':'b-slv'}">${c.membership}</span>`:''}</button>`).join(''):'<div class="dd-item" style="color:var(--tx2)">Tidak ditemukan — gunakan tombol Baru.</div>';
+ qs('#posCustRes').innerHTML=res.length?res.map(c=>`<button class="dd-item" onclick="posSelectCust('${c.id}')">${avatarHTML(c.photo,c.name,28)}<span style="flex:1;min-width:0"><b style="display:block">${esc(c.name)}</b><small style="color:var(--tx2)">${esc(c.phone)}</small></span>${c.membership?memBadge(c.membership):''}</button>`).join(''):'<div class="dd-item" style="color:var(--tx2)">Tidak ditemukan — gunakan tombol Baru.</div>';
  qs('#ddCust').classList.add('open');
 }
 function posSelectCust(id){CART.cust=DB.customers.find(c=>c.id===id);qs('#ddCust').classList.remove('open');qs('#posCustQ').value='';posRenderCust();posRenderOrder()}
@@ -1417,7 +1738,7 @@ function posRenderCust(){
  qs('#posCustSel').innerHTML=c?`<div style="display:flex;align-items:center;gap:12px;border:1px solid var(--bd);border-radius:10px;padding:10px 12px">
   ${avatarHTML(c.photo,c.name,38)}
   <div style="flex:1;min-width:0"><b style="font-size:13px">${esc(c.name)}</b>
-  <div style="font-size:11px;color:var(--tx2)">${esc(c.phone)}${c.membership?` · <span class="badge ${c.membership==='gold'?'b-gold':'b-slv'}">${c.membership} member</span> ${c.points} pts`:''}</div></div>
+  <div style="font-size:11px;color:var(--tx2)">${esc(c.phone)}${c.membership?` · ${memBadge(c.membership)} ${c.points} pts`:''}</div></div>
   <button class="ibtn" onclick="posClearCust()"><i data-lucide="x"></i></button></div>`
  :`<p style="font-size:12px;color:var(--tx2)">Belum ada pelanggan dipilih — cari di atas atau tambah baru.</p>`;
 }
@@ -1473,7 +1794,6 @@ function posNewCust(){
  openModal(`<h3>Tambah Customer Baru</h3>
   <label class="f">Nama</label><input id="ncName" placeholder="Nama pelanggan">
   <label class="f">No. HP</label><input id="ncPhone" type="tel" placeholder="08xxxxxxxxxx">
-  <label class="f">Membership</label><select id="ncMem"><option value="">— Tidak ada —</option><option value="silver">Silver (diskon 5%)</option><option value="gold">Gold (diskon 10%)</option></select>
   <div class="mrow"><button class="btn gho" onclick="closeModal()">Batal</button><button class="btn pri" onclick="posSaveNewCust()">Simpan &amp; Pilih</button></div>`);
  setTimeout(()=>{const e=qs('#ncName');e&&e.focus()},80);
 }
@@ -1481,12 +1801,19 @@ function posSaveNewCust(){
  const name=qv('#ncName'),phone=qv('#ncPhone');
  if(name.length<2)return toast('Nama terlalu pendek.','alert-triangle',true);
  if(phone.replace(/\D/g,'').length<9)return toast('No. HP tidak valid.','alert-triangle',true);
- const c={id:uid(),name,phone,membership:qs('#ncMem').value||null,points:0,visits:0,spend:0,lastVisit:null};
+ const c={id:uid(),name,phone,membership:null,points:0,visits:0,spend:0,lastVisit:null};
  DB.customers.unshift(c);saveDB();closeModal();
  CART.cust=c;posRenderCust();posRenderOrder();toast('Customer "'+name+'" ditambahkan.');
 }
 
-/* ---------- PAYMENT ---------- */
+/* ---------- PAYMENT (mengikuti Settings → Payment) ---------- */
+function payAvailMethods(){
+ const P=DB.payments,m=[];
+ if(P.qris.on)m.push(['qris','QRIS','qr-code']);
+ if(P.debit.on)m.push(['debit','Debit','credit-card']);
+ if(P.transfer.on)m.push(['transfer','Transfer','landmark']);
+ return m;
+}
 function openPay(id){
  const q=DB.queue.find(x=>x.id===id);if(!q)return;
  if(q.status!=='menunggu')return toast('Tiket ini sudah diproses.','info');
@@ -1494,6 +1821,7 @@ function openPay(id){
  openModal(paymentModalHTML(q));renderPmBody();
 }
 function paymentModalHTML(q){
+ const methods=payAvailMethods();
  return `<h3>Payment — ${fmt(q.total)}</h3>
  <p style="font-size:12px;color:var(--tx2);margin-top:4px">${esc(q.name)} · ${esc(q.phone)} · Capster ${esc(capOf(q.capsterId).name)}</p>
  <div style="border:1px solid var(--bd);border-radius:10px;padding:10px 14px;margin-top:14px;max-height:150px;overflow:auto">
@@ -1502,10 +1830,9 @@ function paymentModalHTML(q){
   ${q.disc?`<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0"><span>Discount</span><b>- ${fmt(q.disc)}</b></div>`:''}
  </div>
  <label class="f">Metode Pembayaran</label>
- <div class="pm-grid" id="pmGrid">
+ <div class="pm-grid" id="pmGrid" style="grid-template-columns:repeat(${methods.length+1},1fr)">
   <button class="pm on" onclick="pmSet(this,'cash')"><i data-lucide="banknote"></i>Cash</button>
-  <button class="pm" onclick="pmSet(this,'qris')"><i data-lucide="qr-code"></i>QRIS</button>
-  <button class="pm" onclick="pmSet(this,'debit')"><i data-lucide="credit-card"></i>Debit / Card</button>
+  ${methods.map(([k,l,ic])=>`<button class="pm" onclick="pmSet(this,'${k}')"><i data-lucide="${ic}"></i>${l}</button>`).join('')}
  </div>
  <div id="pmBody"></div>
  <div class="mrow" style="margin-top:18px">
@@ -1516,16 +1843,33 @@ function paymentModalHTML(q){
 function pmSet(el,m){PAY.method=m;qsa('#pmGrid .pm').forEach(b=>b.classList.toggle('on',b===el));renderPmBody()}
 function renderPmBody(){
  const q=PAYQ&&PAYQ.q,b=qs('#pmBody');if(!b||!q)return;
+ const P=DB.payments;
  if(PAY.method==='cash'){
   b.innerHTML=`<label class="f">Amount Received</label>
    <input id="cashIn" type="number" placeholder="${q.total}" oninput="calcChange()">
    <div class="cashq"><button onclick="quickCash(${q.total})">Uang pas</button><button onclick="quickCash(50000)">50rb</button><button onclick="quickCash(100000)">100rb</button><button onclick="quickCash(200000)">200rb</button><button onclick="quickCash(500000)">500rb</button></div>
    <div class="chgline" id="chgBox" style="display:none"><span>Change</span><b id="chgVal"></b></div>`;
  }else if(PAY.method==='qris'){
-  b.innerHTML=`<div class="qrhold"><canvas id="qrC"></canvas><small>SCAN DENGAN E-WALLET / M-BANKING</small></div>`;
-  QRCode.toCanvas(qs('#qrC'),`BARBERGO|${q.name}|${q.total}`,{width:170,margin:1,color:{dark:'#0F172A',light:'#ffffff'}},()=>{});
+  const img=P.qris.img;
+  b.innerHTML=`<div class="qrhold">${img
+   ?`<img src="${img}" style="width:190px;height:190px;object-fit:contain;background:#fff;border-radius:10px;border:1px solid var(--bd)">`
+   :`<canvas id="qrC"></canvas>`}<small>SCAN DENGAN E-WALLET / M-BANKING</small></div>`;
+  if(!img)QRCode.toCanvas(qs('#qrC'),`BARBERGO|${q.name}|${q.total}`,{width:170,margin:1,color:{dark:'#0F172A',light:'#ffffff'}},()=>{});
+ }else if(PAY.method==='debit'){
+  b.innerHTML=`<label class="f">Nomor Referensi (opsional)</label><input id="debRef" placeholder="12 digit di mesin EDC" maxlength="16">
+   ${P.debit.note?`<p style="font-size:11.5px;color:var(--tx2);margin-top:10px"><i data-lucide="info" style="width:12px;height:12px;vertical-align:-2px"></i> ${esc(P.debit.note)}</p>`:''}`;
  }else{
-  b.innerHTML=`<label class="f">Nomor Referensi (opsional)</label><input id="debRef" placeholder="12 digit di mesin EDC" maxlength="16">`;
+  const accs=P.transfer.accounts;
+  if(!accs.length){
+   b.innerHTML=`<div class="empty" style="padding:18px 8px"><i data-lucide="landmark"></i><p>Belum ada rekening transfer.<br>Tambahkan di Settings → Payment.</p></div>`;
+  }else{
+   b.innerHTML=`<div class="blk-label" style="margin-top:14px">Transfer ke rekening berikut</div>`+
+    accs.map(a=>`<div class="tracc">
+     <div style="flex:1;min-width:0"><b>${esc(a.bank)}</b><small class="mono" style="display:block">${esc(a.number)}</small><small style="color:var(--tx2)">a.n. ${esc(a.name)}</small></div>
+     <button class="btn gho sm" onclick="copyText('${esc(a.number)}')"><i data-lucide="copy" style="width:12px;height:12px"></i> Salin</button></div>`).join('')+
+    `<p style="font-size:11px;color:var(--tx3);margin-top:10px">Setelah transfer, masukkan nomor referensi di bawah.</p>
+     <label class="f">Nomor Referensi (opsional)</label><input id="debRef" placeholder="Contoh: 0012345678">`;
+  }
  }
  refreshIcons();
 }
@@ -1542,7 +1886,7 @@ function confirmPayment(){
   const r=parseInt(qv('#cashIn'))||0;
   if(r<q.total)return toast('Uang diterima kurang dari total.','alert-triangle',true);
   q.received=r;q.change=r-q.total;
- }else if(PAY.method==='debit'){q.ref=qv('#debRef')||'—'}
+ }else if(PAY.method==='debit'||PAY.method==='transfer'){const r=qs('#debRef');q.ref=r?qv('#debRef')||'—':'—'}
  q.method=PAY.method;q.status='selesai';q.paidAt=Date.now();
  const cu=DB.customers.find(c=>c.phone===q.phone);
  if(cu){cu.visits++;cu.spend+=q.total;cu.points+=Math.floor(q.total/10000);cu.lastVisit=Date.now()}
@@ -1633,7 +1977,6 @@ function renderQueue(){
 }
 function cancelQueue(id){
  const t=DB.queue.find(x=>x.id===id);
- // jika tiket berasal dari booking, booking ikut dibatalkan
  if(t&&t.bookingId){
   const bk=DB.bookings.find(b=>b.id===t.bookingId);
   if(bk&&bk.status!=='selesai'){bk.status='cancelled';bk.cancelledAt=Date.now()}
@@ -1643,7 +1986,7 @@ function cancelQueue(id){
  });
 }
 
-/* ---------- BOOKING (detail + konfirmasi → antrian) ---------- */
+/* ---------- BOOKING ---------- */
 const BK_ST={menunggu:['Menunggu','b-pend'],confirm:['Di Antrian','b-paid'],cancelled:['Dibatalkan','b-can'],done:['Selesai','b-paid']};
 VIEWS.booking=()=>{
  const now=new Date();const tmr=new Date(now.getTime()+D);
@@ -1680,8 +2023,6 @@ VIEWS.booking=()=>{
  </div>`;
 };
 BIND.booking=()=>{};
-
-/* ===== DETAIL BOOKING ===== */
 function openBookingDetail(id){
  const b=DB.bookings.find(x=>x.id===id);if(!b)return;
  const svcName=b.serviceName||(svcOf(b.serviceId)||{name:'—'}).name;
@@ -1693,7 +2034,7 @@ function openBookingDetail(id){
  const canCancel=b.status==='menunggu'||b.status==='confirm';
  openModal(`
   <h3>Detail Booking</h3>
-  <div class="msub" style="display:flex;align-items:center;gap:8px;margin-top:2px">
+  <div style="display:flex;align-items:center;gap:8px;margin-top:2px">
    ${b.fromWeb?'<span class="badge b-gold">Dari Website</span>':'<span class="badge b-gray">Manual</span>'}
    <span class="badge ${st[1]}">${st[0]}</span>
   </div>
@@ -1719,80 +2060,62 @@ function openBookingDetail(id){
   </div>
   ${canConfirm?'<p style="font-size:11px;color:var(--tx3);margin-top:12px;text-align:center"><i data-lucide="info" style="width:12px;height:12px;vertical-align:-2px"></i> Konfirmasi akan otomatis membuat tiket antrian siap dibayar.</p>':''}`);
 }
-/* Konfirmasi booking → buat tiket antrian otomatis */
 function confirmBooking(id){
  const b=DB.bookings.find(x=>x.id===id);if(!b||b.status!=='menunggu')return;
- // 1) tentukan capster: dari booking, atau capster available pertama
  let cap=b.capsterId?DB.capsters.find(c=>c.id===b.capsterId):null;
  if(!cap){
   cap=DB.capsters.find(c=>c.status==='avail')||DB.capsters.find(c=>c.status!=='off');
   if(!cap)return toast('Tambahkan capster dulu di menu Capsters.','alert-triangle',true);
  }
- // 2) tentukan layanan & harga: cocokkan serviceId / nama dengan daftar layanan
  let svc=b.serviceId?svcOf(b.serviceId):null;
- if(!svc&&b.serviceName)svc=DB.services.find(s=>s.name===b.serviceName);
- const svcName=svc?svc.name:(b.serviceName||'Layanan Booking');
- const svcPrice=svc?svc.price:0;
- // 3) buat / temukan customer berdasarkan No. HP
- let cu=DB.customers.find(c=>c.phone===b.phone);
- if(!cu&&b.phone&&b.phone!=='-'){
-  cu={id:uid(),name:b.name,phone:b.phone,membership:null,points:0,visits:0,spend:0,lastVisit:null};
-  DB.customers.unshift(c);
- }
- // 4) buat tiket antrian (status menunggu → siap dibayar)
+ if(!svc)svc=DB.services.find(s=>s.name.toLowerCase()===(b.serviceName||'').toLowerCase());
+ const price=svc?svc.price:0;
  const q={id:uid(),no:DB.seq++,name:b.name,phone:b.phone||'-',type:'reservasi',capsterId:cap.id,
-  items:[{kind:'svc',id:svc?svc.id:'booked',name:svcName,price:svcPrice,qty:1}],
-  total:svcPrice,status:'menunggu',createdAt:Date.now(),resvAt:b.at,bookingId:b.id};
+  items:[{kind:'svc',id:svc?svc.id:'',name:svc?svc.name:(b.serviceName||'Layanan'),price,qty:1}],
+  total:price,sub:price,mem:0,disc:0,status:'menunggu',createdAt:Date.now(),
+  bookingId:b.id,resvAt:b.at};
  DB.queue.unshift(q);
- // 5) tandai booking terkonfirmasi & tautkan ke tiket
  b.status='confirm';b.queueId=q.id;b.confirmedAt=Date.now();
- saveDB();
- closeModal();
- if(S.page==='booking')render();
- push({icon:'calendar-check',tint:'gr',title:'Booking dikonfirmasi',sub:b.name+' masuk antrian sebagai '+code(q)+' — siap dibayar.',action:'Buka Antrian',dur:6500,tag:'bkconf',onClick:()=>go('antrian')});
- toast('Booking dikonfirmasi — '+code(q)+' masuk ke daftar antrian.','calendar-check');
+ saveDB();closeModal();render();
+ push({icon:'calendar-check',tint:'gr',title:'Booking dikonfirmasi',sub:b.name+' masuk antrian — tiket '+code(q)+' ('+fmt(price)+').',action:'Buka Antrian',dur:6500,tag:'bkq',onClick:()=>go('antrian')});
+ toast('Booking dikonfirmasi → tiket '+code(q)+' dibuat.','calendar-check');
 }
 function cancelBooking(id){
  const b=DB.bookings.find(x=>x.id===id);if(!b)return;
- const q=b.queueId?DB.queue.find(x=>x.id===b.queueId):null;
- confirmModal('Batalkan booking ini?',q
-  ?'Booking dibatalkan dan tiket antrian '+code(q)+' juga akan dibatalkan.'
-  :'Booking akan ditandai dibatalkan.','Ya, batalkan',()=>{
+ confirmModal('Batalkan booking ini?','Booking akan ditandai dibatalkan.'+(b.queueId?' Tiket antrian terkait juga dibatalkan.':''),'Ya, batalkan',()=>{
   b.status='cancelled';b.cancelledAt=Date.now();
-  if(q&&q.status==='menunggu'){q.status='batal'}
-  saveDB();closeModal();
-  if(S.page==='booking')render();else render();
-  toast('Booking dibatalkan.'+(q?' Tiket '+code(q)+' juga dibatalkan.':''),'x-circle');
+  if(b.queueId){const q=DB.queue.find(x=>x.id===b.queueId);if(q&&q.status==='menunggu')q.status='batal'}
+  saveDB();closeModal();render();toast('Booking dibatalkan.','x-circle');
  });
 }
 function delBooking(id){
- const b=DB.bookings.find(x=>x.id===id);if(!b)return;
- if(b.status==='confirm'&&b.queueId&&DB.queue.find(x=>x.id===b.queueId&&x.status==='menunggu'))
-  return toast('Batalkan booking dulu sebelum menghapus — tiketnya masih di antrian.','alert-triangle',true);
- confirmModal('Hapus booking ini?','Data booking akan dihapus permanen.','Ya, hapus',()=>{
-  DB.bookings=DB.bookings.filter(x=>x.id!==id);saveDB();closeModal();render();toast('Booking dihapus.','trash-2')});
+ confirmModal('Hapus booking ini?','Data booking dihapus permanen dari daftar.','Ya, hapus',()=>{
+  DB.bookings=DB.bookings.filter(x=>x.id!==id);saveDB();closeModal();render();toast('Booking dihapus.','trash-2');
+ });
 }
 function bkOpenModal(){
- if(!DB.services.length)return toast('Tambahkan layanan dulu di menu Layanan.','info');
- if(!DB.capsters.length)return toast('Tambahkan capster dulu di menu Capsters.','info');
  openModal(`<h3>Booking Baru</h3>
   <label class="f">Nama Pelanggan</label><input id="bkName" placeholder="Nama pelanggan">
   <label class="f">No. HP</label><input id="bkPhone" type="tel" placeholder="08xxxxxxxxxx">
   <label class="f">Layanan</label><select id="bkSvc">${DB.services.map(s=>`<option value="${s.id}">${esc(s.name)} — ${fmt(s.price)}</option>`).join('')}</select>
-  <label class="f">Capster</label><select id="bkCap">${DB.capsters.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-   <div><label class="f">Hari</label><select id="bkDay"><option value="0">Hari Ini</option><option value="1">Besok</option></select></div>
-   <div><label class="f">Jam</label><input id="bkTime" type="time" value="10:00"></div></div>
+  <label class="f">Capster</label><select id="bkCap"><option value="">— Bebas —</option>${DB.capsters.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select>
+  <label class="f">Tanggal</label><input id="bkDate" type="date" value="${todayKey()}">
+  <label class="f">Jam</label><input id="bkTime" type="time" value="10:00">
+  <label class="f">Catatan (opsional)</label><input id="bkNote" placeholder="Catatan...">
   <div class="mrow"><button class="btn gho" onclick="closeModal()">Batal</button><button class="btn pri" onclick="bkSave()">Simpan Booking</button></div>`);
 }
 function bkSave(){
  const name=qv('#bkName');if(name.length<2)return toast('Isi nama pelanggan.','alert-triangle',true);
- const phone=qv('#bkPhone');
- if(phone&&phone.replace(/\D/g,'').length<9)return toast('No. HP tidak valid.','alert-triangle',true);
- const t=new Date();t.setDate(t.getDate()+parseInt(qs('#bkDay').value));
- const[h,m]=qv('#bkTime').split(':');t.setHours(+h||10,+m||0,0,0);
- DB.bookings.push({id:uid(),at:t.getTime(),name,phone:phone||'-',serviceId:qs('#bkSvc').value,capsterId:qs('#bkCap').value,status:'menunggu',createdAt:Date.now()});
- saveDB();closeModal();render();toast('Booking baru ditambahkan.');
+ const phone=qv('#bkPhone')||'-';
+ const svcId=qs('#bkSvc').value;const svc=svcOf(svcId);
+ const date=qv('#bkDate'),time=qv('#bkTime');
+ if(!date||!time)return toast('Isi tanggal & jam booking.','alert-triangle',true);
+ const at=new Date(date+'T'+time).getTime();
+ if(isNaN(at))return toast('Tanggal/jam tidak valid.','alert-triangle',true);
+ const capId=qs('#bkCap').value||'';
+ const cap=capId?capOf(capId):null;
+ DB.bookings.push({id:uid(),at,name,phone,serviceId:svcId,serviceName:svc?svc.name:'-',capsterId:capId,capsterName:cap?cap.name:'',status:'menunggu',note:qv('#bkNote'),createdAt:Date.now()});
+ saveDB();closeModal();render();toast('Booking disimpan.');
 }
 
 /* ---------- TRANSAKSI ---------- */
@@ -1836,7 +2159,7 @@ VIEWS.customers=()=>{
   ${list.length?list.map(c=>`<tr onclick="openCust('${c.id}')">
    <td class="nolbl"><div style="display:flex;align-items:center;gap:10px">${avatarHTML(c.photo,c.name,32)}<b>${esc(c.name)}</b></div></td>
    <td class="mono" style="font-size:11.5px">${esc(c.phone)}</td>
-   <td>${c.membership?`<span class="badge ${c.membership==='gold'?'b-gold':'b-slv'}">${c.membership}</span>`:'<span class="badge b-gray">reguler</span>'}</td>
+   <td>${memBadge(c.membership)}</td>
    <td>${c.visits}x</td>
    <td class="mono nolbl" style="font-weight:700">${fmt(c.spend)}</td>
    <td style="color:var(--tx2);font-size:11.5px">${c.lastVisit?fdate(c.lastVisit):'—'}</td></tr>`).join('')
@@ -1848,7 +2171,7 @@ function custModal(){
  openModal(`<h3>Tambah Customer</h3>
   <label class="f">Nama</label><input id="cuName" placeholder="Nama pelanggan">
   <label class="f">No. HP</label><input id="cuPhone" type="tel" placeholder="08xxxxxxxxxx">
-  <label class="f">Membership</label><select id="cuMem"><option value="">— Reguler —</option><option value="silver">Silver (5%)</option><option value="gold">Gold (10%)</option></select>
+  <label class="f">Membership</label><select id="cuMem"><option value="">— Reguler —</option>${MEM_TIERS.map(t=>`<option value="${t.id}">${t.name} (${t.pct}%)</option>`).join('')}</select>
   <div class="mrow"><button class="btn gho" onclick="closeModal()">Batal</button><button class="btn pri" onclick="custSave()">Simpan</button></div>`);
 }
 function custSave(){
@@ -1864,7 +2187,7 @@ function openCust(id){
  <div class="dr-body">
   <div style="display:flex;align-items:center;gap:14px">${avatarHTML(c.photo,c.name,52)}
    <div><b style="font-size:16px">${esc(c.name)}</b><div class="mono" style="font-size:11.5px;color:var(--tx2)">${esc(c.phone)}</div>
-   ${c.membership?`<span class="badge ${c.membership==='gold'?'b-gold':'b-slv'}" style="margin-top:4px">${c.membership} member</span>`:''}</div></div>
+   ${c.membership?`<span style="margin-top:4px;display:inline-block">${memBadge(c.membership)}</span>`:''}</div></div>
   <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:18px">
    <div class="card pad" style="padding:14px"><div class="blk-label" style="margin:0">Visits</div><b style="font-size:20px">${c.visits}x</b></div>
    <div class="card pad" style="padding:14px"><div class="blk-label" style="margin:0">Points</div><b style="font-size:20px">${c.points}</b></div>
@@ -1875,7 +2198,7 @@ function openCust(id){
   <div style="display:flex;gap:10px;flex-wrap:wrap">
    <button class="btn pri" onclick="orderWithCust('${c.id}')"><i data-lucide="shopping-cart" style="width:14px;height:14px"></i> Buat Order</button>
    <button class="btn gho" onclick="chatWithCust('${c.id}')"><i data-lucide="message-square" style="width:14px;height:14px"></i> Chat</button>
-   <button class="btn gho" onclick="toggleMember('${c.id}')">${c.membership?'Hapus Member':'Jadikan Member'}</button>
+   <button class="btn gho" onclick="memAssignModal('${c.id}')"><i data-lucide="credit-card" style="width:14px;height:14px"></i> ${c.membership?'Ubah Tier':'Jadikan Member'}</button>
    <button class="btn dng" onclick="delCustomer('${c.id}')"><i data-lucide="trash-2" style="width:14px;height:14px"></i></button>
   </div>
  </div>`);
@@ -1887,26 +2210,70 @@ function chatWithCust(id){
  if(!tid)return toast('Pelanggan ini belum memulai chat. Mereka bisa chat dari aplikasi reservasi BarberGo.','info');
  openChatRoom(tid);
 }
-function toggleMember(id){const c=DB.customers.find(x=>x.id===id);c.membership=c.membership?null:'gold';saveDB();openCust(id);toast(c.membership?'Dijadikan Gold Member.':'Membership dihapus.')}
 function delCustomer(id){confirmModal('Hapus customer ini?','Riwayat transaksi tetap tersimpan di laporan.','Ya, hapus',()=>{DB.customers=DB.customers.filter(c=>c.id!==id);closePanels();render();toast('Customer dihapus.','trash-2')})}
 
-/* ---------- MEMBERSHIP ---------- */
+/* ---------- MEMBERSHIP (Bronze/Gold/Platinum/Black · Bulanan/Tahunan) ---------- */
 VIEWS.membership=()=>{
- const list=DB.customers.filter(c=>c.membership);
+ const q=(S.memSearch||'').toLowerCase();
+ const cycle=S.memCycle||'mo';
+ const list=DB.customers.filter(c=>c.membership&&(!q||c.name.toLowerCase().includes(q)||c.phone.includes(q)));
+ const tiers=MEM_TIERS.map(t=>({...t,count:DB.customers.filter(c=>c.membership===t.id).length}));
  return `
- ${pageHead('Membership',`${list.length} member aktif — Gold diskon 10%, Silver 5%.`)}
+ ${pageHead('Membership','Paket bulanan &amp; tahunan — kelola tier member dan cari cepat lewat search bar.')}
+ <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px">
+  <div class="srch" style="flex:1;min-width:220px;max-width:340px"><i data-lucide="search"></i><input placeholder="Cari member — nama / No. HP..." value="${esc(S.memSearch||'')}" oninput="S.memSearch=this.value;render()"></div>
+  <div class="tabs"><button class="${cycle==='mo'?'on':''}" onclick="S.memCycle='mo';render()">Bulanan</button><button class="${cycle==='yr'?'on':''}" onclick="S.memCycle='yr';render()">Tahunan</button></div>
+  <button class="btn pri" onclick="memAssignModal('')"><i data-lucide="user-plus" style="width:14px;height:14px"></i> Tambah Member</button>
+ </div>
+ <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-bottom:16px">
+  ${tiers.map(t=>`<div class="card pad memcard">
+   <div style="display:flex;align-items:center;justify-content:space-between">
+    <span class="badge ${t.color}">${t.name}</span>
+    <span class="code">${t.count} member</span></div>
+   <div style="margin:12px 0 4px"><b style="font:700 24px 'Plus Jakarta Sans',Inter,sans-serif">${fmt(cycle==='mo'?t.mo:t.yr)}</b>
+    <span style="font-size:11px;color:var(--tx2)">/${cycle==='mo'?'bulan':'tahun'}</span></div>
+   <div style="font-size:10.5px;color:var(--tx3)">Diskon ${t.pct}% semua transaksi</div>
+   <ul class="memfeat">${t.feat.map(f=>`<li>${f}</li>`).join('')}</ul>
+  </div>`).join('')}
+ </div>
  <div class="card pad">
- ${list.length?list.map(c=>{const prog=Math.min(100,(c.points%500)/5);return `<div class="rrow">
-   ${avatarHTML(c.photo,c.name,42)}
+  <div class="chead"><h3>Daftar Member</h3><span class="code">${list.length} member${q?' (hasil pencarian)':''}</span></div>
+  ${list.length?list.map(c=>{const t=MEM_TIERS.find(x=>x.id===c.membership);const prog=Math.min(100,(c.points%500)/5);
+   return `<div class="rrow">${avatarHTML(c.photo,c.name,42)}
    <div class="in"><b>${esc(c.name)}</b><small>${esc(c.phone)} · ${c.visits}x kunjungan · ${fmt(c.spend)}</small>
     <div style="height:5px;background:var(--soft2);border-radius:99px;margin-top:6px;overflow:hidden;max-width:260px"><i style="display:block;height:100%;width:${prog}%;background:var(--blue);border-radius:99px"></i></div></div>
-   <span class="badge ${c.membership==='gold'?'b-gold':'b-slv'}">${c.membership}</span>
+   ${t?`<span class="badge ${t.color}">${t.name}</span>`:''}
    <span class="amt">${c.points} pts</span>
+   <button class="btn gho sm" onclick="memAssignModal('${c.id}')"><i data-lucide="repeat" style="width:13px;height:13px"></i> Tier</button>
    <button class="btn gho sm" onclick="chatWithCust('${c.id}')"><i data-lucide="message-square" style="width:13px;height:13px"></i></button>
   </div>`}).join('')
- :'<div class="empty"><i data-lucide="credit-card"></i><p>Belum ada member. Tandai pelanggan sebagai member dari halaman Customers.</p></div>'}
+  :`<div class="empty"><i data-lucide="credit-card"></i><p>${q?'Tidak ada member yang cocok dengan pencarian.':'Belum ada member. Tandai pelanggan sebagai member lewat tombol Tambah Member.'}</p></div>`}
  </div>`;
 };
+function memAssignModal(cid){
+ const c=cid?DB.customers.find(x=>x.id===cid):null;
+ const cands=c?[c]:DB.customers.filter(x=>!x.membership);
+ openModal(`<h3>${c?'Ubah Tier — '+esc(c.name):'Jadikan Member'}</h3>
+  ${c?'':`<label class="f">Pilih Pelanggan</label><select id="membCust">${cands.map(x=>`<option value="${x.id}">${esc(x.name)} — ${esc(x.phone)}</option>`).join('')||'<option value="">— semua pelanggan sudah jadi member —</option>'}</select>`}
+  <label class="f">Tier Membership</label>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" id="memTierGrid">
+  ${MEM_TIERS.map(t=>`<button class="pm ${c&&c.membership===t.id?'on':''}" data-tier="${t.id}" onclick="qsa('#memTierGrid .pm').forEach(b=>b.classList.remove('on'));this.classList.add('on')">
+   <b style="font-size:13px">${t.name}</b><small style="font-size:10px">${t.pct}% · ${fmt(t.mo)}/bln · ${fmt(t.yr)}/thn</small></button>`).join('')}
+  </div>
+  <div class="mrow"><button class="btn gho" onclick="closeModal()">Batal</button>
+   ${c?`<button class="btn dng" onclick="memRemove('${c.id}')">Hapus Member</button>`:''}
+   <button class="btn pri" onclick="memAssignSave('${cid||''}')">Simpan</button></div>`);
+}
+function memAssignSave(cid){
+ const targetId=cid||qv('#membCust');
+ if(!targetId)return toast('Pilih pelanggan dulu.','alert-triangle',true);
+ const tierBtn=qs('#memTierGrid .pm.on');
+ if(!tierBtn)return toast('Pilih tier dulu.','alert-triangle',true);
+ const c=DB.customers.find(x=>x.id===targetId);if(!c)return;
+ c.membership=tierBtn.dataset.tier;
+ saveDB();closeModal();render();toast(c.name+' → tier '+tierBtn.dataset.tier.toUpperCase()+'.','credit-card');
+}
+function memRemove(id){confirmModal('Hapus membership?','Pelanggan kembali menjadi reguler.','Ya, hapus',()=>{const c=DB.customers.find(x=>x.id===id);if(c)c.membership=null;saveDB();closeModal();render();toast('Membership dihapus.','credit-card')})}
 
 /* ---------- CAPSTERS ---------- */
 VIEWS.capsters=()=>{
@@ -1985,7 +2352,7 @@ function managerView(kind){
  ${pageHead(label,`Kelola daftar ${label.toLowerCase()} yang muncul di POS.`,'<button class="btn pri" onclick="itemModal(\''+kind+'\')"><i data-lucide="plus" style="width:15px;height:15px"></i> Tambah '+label+'</button>')}
  <div class="card pad">
   ${arr.length?arr.map(x=>`<div class="rrow">
-   <span class="avtxt" style="width:38px;height:38px;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;background:var(--selbg);color:var(--blue)"><i data-lucide="${kind==='svc'?'scissors':'package'}"></i></span>
+   <span style="width:38px;height:38px;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;background:var(--selbg);color:var(--blue)"><i data-lucide="${kind==='svc'?'scissors':'package'}"></i></span>
    <div class="in"><b>${esc(x.name)}</b><small class="mono">${fmt(x.price)}</small></div>
    <button class="ibtn" onclick="itemModal('${kind}','${x.id}')"><i data-lucide="pencil"></i></button>
    <button class="ibtn red" onclick="itemDel('${kind}','${x.id}')"><i data-lucide="trash-2"></i></button>
@@ -2204,88 +2571,231 @@ function staffDel(id){confirmModal('Hapus staff ini?','Riwayat kasbon staff teta
 /* ---------- CHAT PELANGGAN (Firestore real-time) ---------- */
 VIEWS.chat=()=>{
  if(S.chatTid)return chatRoomHTML();
- const tids=Object.keys(CHAT_THREADS).sort((a,b)=>(CHAT_THREADS[b].lastAt||0)-(CHAT_THREADS[a].lastAt||0));
  return `
- ${pageHead('Chat','Percakapan dengan pelanggan via aplikasi reservasi — real-time Firestore.')}
+ ${pageHead('Chat','Tekan lama percakapan → hapus pesan, blokir, atau lapor.')}
  <div class="chat-wrap">
   <div class="card chat-list">
    <div class="cl-head">
-    <div class="srch" style="margin-bottom:10px"><i data-lucide="search"></i><input placeholder="Cari pelanggan..." value="" oninput="chatFilterRun(this.value)"></div>
+    <div class="srch" style="margin-bottom:10px"><i data-lucide="search"></i><input id="chatSearch" placeholder="Cari pelanggan..." autocomplete="off" oninput="chatFilterRun()"></div>
    </div>
    <div class="cl-scroll" id="convList">${convListHTML('')}</div>
   </div>
   <div class="card chat-room" id="chatRoom">
    <div class="chat-empty"><i data-lucide="message-square" style="width:34px;height:34px"></i>
-   <p style="font-size:13px">Pilih percakapan pelanggan di sebelah kiri<br>untuk membalas pesan.</p>
-   ${!tids.length?'<p style="font-size:11.5px">Pelanggan mulai chat dari aplikasi reservasi BarberGo.</p>':''}</div>
+   <p style="font-size:13px">Pilih percakapan pelanggan di sebelah kiri<br>untuk membalas pesan.</p></div>
   </div>
  </div>`;
 };
 function convListHTML(q){
  const tids=Object.keys(CHAT_THREADS)
-  .filter(tid=>{const t=CHAT_THREADS[tid];const s=q.toLowerCase();
+  .filter(tid=>{const t=CHAT_THREADS[tid];const s=(q||'').toLowerCase();
    return !s||(t.customerName||'').toLowerCase().includes(s)||(t.customerPhone||'').includes(q)})
   .sort((a,b)=>(CHAT_THREADS[b].lastAt||0)-(CHAT_THREADS[a].lastAt||0));
  if(!tids.length)return '<div class="empty"><i data-lucide="message-square"></i><p>Belum ada percakapan.<br>Pelanggan mulai chat dari aplikasi reservasi BarberGo.</p></div>';
  return tids.map(tid=>{const t=CHAT_THREADS[tid];
-  return `<button class="conv ${S.chatTid===tid?'active':''}" onclick="openChatRoom('${tid}')">
+  return `<button class="conv ${S.chatTid===tid?'active':''} ${t.blocked?'is-blocked':''}" onclick="convClick('${tid}')"
+   oncontextmenu="convCtx(event,'${tid}')"
+   ontouchstart="convPressStart(event,'${tid}')" ontouchmove="convPressCancel()" ontouchend="convPressCancel()" ontouchcancel="convPressCancel()">
    ${avatarHTML(null,t.customerName||'?',40)}
    <span class="cin"><span class="r1"><b>${esc(t.customerName||'Pelanggan')}</b><span class="tm">${t.lastAt?ftime(t.lastAt):''}</span></span>
-   <span class="r2"><span class="pv">${esc(t.lastText||'')}</span>${CHAT_UNREAD[tid]?`<span class="unb">1</span>`:''}</span></span></button>`;
+   <span class="r2"><span class="pv">${esc(t.lastText||'')}</span>${CHAT_UNREAD[tid]?'<span class="unb">1</span>':''}</span></span></button>`;
  }).join('');
 }
-function chatFilterRun(v){const el=qs('#convList');if(el){el.innerHTML=convListHTML(v);refreshIcons()}}
-BIND.chat=()=>{if(S.chatTid)bindChatRoom()};
+function chatFilterRun(){refreshChatListUI()}
+
+/* ★ LONG-PRESS 480ms → menu konteks */
+let LP={timer:null,tid:null,x:0,y:0,suppress:false};
+function convPressStart(e,tid){
+ if(e.touches&&e.touches.length!==1)return;
+ const t=e.touches?e.touches[0]:e;
+ LP.tid=tid;LP.x=t.clientX;LP.y=t.clientY;LP.suppress=false;convPressCancel();
+ LP.timer=setTimeout(()=>{LP.timer=null;LP.suppress=true;if(navigator.vibrate)navigator.vibrate(12);openChatCtx(tid,LP.x,LP.y)},480);
+}
+function convPressCancel(){if(LP.timer){clearTimeout(LP.timer);LP.timer=null}}
+function convClick(tid){if(LP.suppress){LP.suppress=false;return}openChatRoom(tid)}
+function convCtx(e,tid){e.preventDefault();convPressCancel();LP.suppress=true;openChatCtx(tid,e.clientX,e.clientY)}
+document.addEventListener('click',e=>{if(!e.target.closest('#chatCtx'))closeChatCtx()});
+window.addEventListener('scroll',closeChatCtx,true);
+
+/* ★ MENU KONTEKS: Hapus / Blokir / Lapor */
+function openChatCtx(tid,x,y){
+ closeChatCtx();
+ const t=CHAT_THREADS[tid]||{};
+ const el=document.createElement('div');
+ el.id='chatCtx';el.className='ctx';
+ el.innerHTML=`
+  <div class="ctx-h">${esc(t.customerName||'Pelanggan')}${t.customerPhone?' · '+esc(t.customerPhone):''}</div>
+  <button onclick="chatActDelete('${tid}')"><span class="cic"><i data-lucide="trash-2"></i></span> Hapus Pesan</button>
+  <div class="sep"></div>
+  <button onclick="chatActBlock('${tid}',${t.blocked?'false':'true'})"><span class="cic"><i data-lucide="${t.blocked?'lock-open':'ban'}"></i></span> ${t.blocked?'Buka Blokir':'Blokir Pelanggan'}</button>
+  <div class="sep"></div>
+  <button class="red" onclick="chatActReport('${tid}')"><span class="cic"><i data-lucide="flag"></i></span> Lapor</button>`;
+ document.body.appendChild(el);refreshIcons();
+ const r=el.getBoundingClientRect();
+ el.style.left=Math.max(8,Math.min(x,innerWidth-r.width-8))+'px';
+ el.style.top=Math.max(8,Math.min(y,innerHeight-r.height-8))+'px';
+}
+function closeChatCtx(){const e=qs('#chatCtx');if(e)e.remove()}
+async function chatActDelete(tid){
+ closeChatCtx();
+ confirmModal('Hapus seluruh percakapan?','Semua pesan dengan pelanggan ini dihapus permanen dari Firestore.','Ya, hapus',async()=>{
+  try{
+   const tRef=dbFS.collection('chats').doc(DB.email).collection('threads').doc(tid);
+   const msgs=await tRef.collection('messages').get();
+   const batch=dbFS.batch();
+   msgs.forEach(d=>batch.delete(d.ref));
+   batch.delete(tRef);
+   await batch.commit();
+   delete CHAT_THREADS[tid];delete CHAT_UNREAD[tid];delete CHAT_SEEN[tid];saveChatSeen();
+   if(S.chatTid===tid){S.chatTid=null;render()}else refreshChatListUI();
+   toast('Percakapan dihapus.','trash-2');
+  }catch(e){toast('Gagal menghapus: '+(e.message||e),'alert-triangle',true)}
+ });
+}
+function chatActBlock(tid,val){
+ closeChatCtx();
+ dbFS.collection('chats').doc(DB.email).collection('threads').doc(tid)
+  .set({blocked:val},{merge:true})
+  .then(()=>{
+   if(CHAT_THREADS[tid])CHAT_THREADS[tid].blocked=val;
+   refreshChatListUI();
+   toast(val?'Pelanggan diblokir — tidak bisa mengirim pesan lagi.':'Blokir dibuka.',val?'ban':'lock-open');
+  })
+  .catch(e=>toast('Gagal: '+(e.message||e),'alert-triangle',true));
+}
+function chatActReport(tid){
+ closeChatCtx();
+ const t=CHAT_THREADS[tid]||{};
+ openModal(`<h3>Lapor Percakapan</h3>
+  <p style="font-size:12.5px;color:var(--tx2);margin-top:6px">Laporkan pelanggan <b>${esc(t.customerName||'-')}</b>${t.customerPhone?' ('+esc(t.customerPhone)+')':''}? Laporan tersimpan ke Firestore untuk ditinjau admin.</p>
+  <label class="f">Alasan Laporan</label>
+  <textarea id="rpReason" rows="3" placeholder="Contoh: spam, penipuan, pelecehan..."></textarea>
+  <div class="mrow"><button class="btn gho" onclick="closeModal()">Batal</button><button class="btn dng" onclick="chatSendReport('${tid}')"><i data-lucide="flag"></i> Kirim Laporan</button></div>`);
+}
+function chatSendReport(tid){
+ const reason=qv('#rpReason');
+ if(reason.length<3)return toast('Tulis alasan laporan dulu.','alert-triangle',true);
+ closeModal();
+ dbFS.collection('chats').doc(DB.email).collection('threads').doc(tid)
+  .set({report:{reason,at:Date.now()}},{merge:true})
+  .then(()=>toast('Laporan terkirim. Terima kasih.','flag'))
+  .catch(e=>toast('Gagal: '+(e.message||e),'alert-triangle',true));
+}
+
+BIND.chat=()=>{if(S.chatTid){bindChatRoom();bindMsgScroll()}};
 function chatRoomHTML(){
  const t=CHAT_THREADS[S.chatTid]||{};
+ const blocked=!!t.blocked;
  return `
- <div class="chat-room" style="height:100%">
+ <div class="chat-room ${blocked?'blocked':''}" id="chatRoomPanel">
   <div class="cr-head">
-   <button class="ibtn cr-back" onclick="S.chatTid=null;render()"><i data-lucide="arrow-left"></i></button>
+   <button class="ibtn cr-back" onclick="closeChatRoom()"><i data-lucide="arrow-left"></i></button>
    ${avatarHTML(null,t.customerName||'?',38)}
    <div style="flex:1;min-width:0"><b style="font-size:13.5px">${esc(t.customerName||'Pelanggan')}</b>
-    <div class="mono" style="font-size:10.5px;color:var(--tx2)">${esc(t.customerPhone||'-')} · balasan terkirim real-time ke aplikasi pelanggan</div></div>
+    <div class="mono" style="font-size:10.5px;color:var(--tx2)">${esc(t.customerPhone||'-')} · balasan real-time ke aplikasi pelanggan</div></div>
+   <button class="ibtn" title="Menu" onclick="chatHeadMenu(event,'${S.chatTid}')"><i data-lucide="more-vertical"></i></button>
   </div>
+  ${blocked?`<div class="blocked-bar"><i data-lucide="ban" style="width:14px;height:14px"></i> Kamu memblokir pelanggan ini<button onclick="chatActBlock('${S.chatTid}',false)">Buka Blokir</button></div>`:''}
   <div class="msgs" id="msgs"><div class="empty" style="padding:26px 10px"><i data-lucide="loader-2"></i><p>Memuat pesan...</p></div></div>
-  <div class="chat-inp">
-   <input id="shopMsg" placeholder="Tulis balasan..." onkeydown="if(event.key==='Enter')sendShopMsg()">
-   <button class="btn pri" onclick="sendShopMsg()" style="width:42px;padding:0"><i data-lucide="send"></i></button>
+  <div class="typing" id="typingBar"><span class="tdots"><i></i><i></i><i></i></span><span>Pelanggan sedang mengetik…</span></div>
+  <button class="msg-pill" id="msgPill" onclick="scrollMsgsBottom(true)"><i data-lucide="arrow-down"></i> Pesan terbaru</button>
+  <div class="chat-inp" id="chatInp">
+   <input id="shopMsg" placeholder="${blocked?'Percakapan diblokir':'Tulis balasan...'}" ${blocked?'disabled':''} enterkeyhint="send" oninput="shopTyping(event)" onkeydown="if(event.key==='Enter')sendShopMsg()">
+   <button class="btn pri send-btn" onclick="sendShopMsg()"><i data-lucide="send"></i></button>
   </div>
  </div>`;
 }
+function chatHeadMenu(e,tid){
+ const b=e.currentTarget.getBoundingClientRect();
+ openChatCtx(tid,b.left,b.bottom+6);
+}
+
+/* ★ SCROLL: auto ke pesan terbaru + tombol pill */
+function scrollMsgsBottom(smooth){
+ const box=qs('#msgs');if(!box)return;
+ box.scrollTo({top:box.scrollHeight,behavior:smooth?'smooth':'auto'});
+}
+function bindMsgScroll(){
+ const box=qs('#msgs'),pill=qs('#msgPill');if(!box||!pill)return;
+ box.addEventListener('scroll',()=>{
+  const nearBottom=box.scrollHeight-box.scrollTop-box.clientHeight<80;
+  pill.style.display=nearBottom?'none':'inline-flex';
+ });
+}
+
+/* ★ PESAN REAL-TIME + TYPING INDICATOR + AUTO SCROLL */
+let roomPrevLen=-1,roomFirstLoad=true;
 function bindChatRoom(){
  if(unsubRoom){unsubRoom();unsubRoom=null}
+ if(unsubRoomMeta){unsubRoomMeta();unsubRoomMeta=null}
+ roomPrevLen=-1;roomFirstLoad=true;
  const tid=S.chatTid;if(!tid)return;
+ const tRef=dbFS.collection('chats').doc(DB.email).collection('threads').doc(tid);
  CHAT_SEEN[tid]=Date.now();delete CHAT_UNREAD[tid];saveChatSeen();buildSidebar();
- unsubRoom=dbFS.collection('chats').doc(DB.email).collection('threads').doc(tid)
-  .collection('messages').orderBy('at')
+ kbUpdate();
+ /* meta listener: typing cust + status blokir */
+ unsubRoomMeta=tRef.onSnapshot(s=>{
+  const d=s.data()||{};
+  if(!CHAT_THREADS[tid])CHAT_THREADS[tid]={};
+  Object.assign(CHAT_THREADS[tid],d);
+  const now=Date.now();
+  const ct=!!(d.custTyping&&d.custTypingAt&&(now-d.custTypingAt<10000));
+  const bar=qs('#typingBar');if(bar)bar.classList.toggle('on',ct);
+  const room=qs('#chatRoomPanel');
+  if(room)room.classList.toggle('blocked',!!d.blocked);
+  const inp=qs('#shopMsg');
+  if(inp){inp.disabled=!!d.blocked;inp.placeholder=d.blocked?'Percakapan diblokir':'Tulis balasan...'}
+ },err=>console.warn('room meta:',err));
+ /* messages listener */
+ unsubRoom=tRef.collection('messages').orderBy('at')
   .onSnapshot(snap=>{
    const box=qs('#msgs');if(!box)return;
    const msgs=snap.docs.map(d=>d.data());
+   const changed=msgs.length!==roomPrevLen;
+   const first=roomFirstLoad;roomFirstLoad=false;
+   roomPrevLen=msgs.length;
    box.innerHTML=msgs.length?msgs.map(m=>`<div class="bub ${m.from==='shop'?'me':'cust'}">${esc(m.text)}<span class="bt">${ftime(m.at)}</span></div>`).join('')
-   :'<div class="empty" style="padding:26px 10px"><i data-lucide="message-circle"></i><p>Belum ada pesan.</p></div>';
-   box.scrollTop=box.scrollHeight;refreshIcons();
-  },err=>console.warn(err));
+    :'<div class="empty" style="padding:26px 10px"><i data-lucide="message-circle"></i><p>Belum ada pesan.</p></div>';
+   if(changed)requestAnimationFrame(()=>scrollMsgsBottom(!first)); /* ← AUTO SCROLL ke pesan terbaru */
+   CHAT_SEEN[tid]=Date.now();delete CHAT_UNREAD[tid];saveChatSeen();buildSidebar();
+   refreshIcons();
+  },err=>console.warn('room:',err));
+}
+/* ★ TYPING: kirim status "shop typing" ke Firestore (debounce 3s) */
+let typingClearTimer=null;
+function shopTyping(evt){
+ const tid=S.chatTid;if(!tid)return;
+ const tRef=dbFS.collection('chats').doc(DB.email).collection('threads').doc(tid);
+ const hasText=evt&&evt.target&&evt.target.value.trim().length>0;
+ if(!hasText){
+  if(typingClearTimer){clearTimeout(typingClearTimer);typingClearTimer=null}
+  tRef.set({shopTyping:false},{merge:true}).catch(()=>{});
+  return;
+ }
+ tRef.set({shopTyping:true,shopTypingAt:Date.now()},{merge:true}).catch(()=>{});
+ if(typingClearTimer)clearTimeout(typingClearTimer);
+ typingClearTimer=setTimeout(()=>{tRef.set({shopTyping:false},{merge:true}).catch(()=>{})},3000);
 }
 function sendShopMsg(){
  const tid=S.chatTid;if(!tid)return;
+ if(CHAT_THREADS[tid]&&CHAT_THREADS[tid].blocked)return toast('Percakapan ini diblokir.','ban',true);
  const inp=qs('#shopMsg');if(!inp)return;
  const text=(inp.value||'').trim();if(!text)return;
  inp.value='';
+ if(typingClearTimer){clearTimeout(typingClearTimer);typingClearTimer=null}
  const t=CHAT_THREADS[tid]||{};
- dbFS.collection('chats').doc(DB.email).collection('threads').doc(tid)
-  .collection('messages').add({from:'shop',text,at:Date.now(),name:DB.shop.name})
-  .then(()=>dbFS.collection('chats').doc(DB.email).collection('threads').doc(tid)
-   .set({lastText:text,lastFrom:'shop',lastAt:Date.now(),customerName:t.customerName||'',customerPhone:t.customerPhone||''},{merge:true}))
-  .catch(e=>toast('Gagal mengirim: '+(e.message||e),'alert-triangle',true));
+ const tRef=dbFS.collection('chats').doc(DB.email).collection('threads').doc(tid);
+ tRef.collection('messages').add({from:'shop',text,at:Date.now(),name:DB.shop.name})
+  .then(()=>tRef.set({lastText:text,lastFrom:'shop',lastAt:Date.now(),shopTyping:false,customerName:t.customerName||'',customerPhone:t.customerPhone||''},{merge:true}))
+  .catch(e=>{inp.value=text;toast('Gagal mengirim: '+(e.message||e),'alert-triangle',true)});
 }
 
 /* ---------- SETTINGS ---------- */
 VIEWS.settings=()=>{
- const tabs=[['profil','Edit Profile','user-round'],['keamanan','Keamanan','shield-check'],['cs','Customer Service','headphones'],['info','Informasi','info']];
- const body={profil:setProfil,keamanan:setKeamanan,cs:setCS,info:setInfo}[S.setTab]||setProfil;
+ const tabs=[['profil','Edit Profile','user-round'],['payment','Payment','wallet'],['keamanan','Keamanan','shield-check'],['cs','Customer Service','headphones'],['info','Informasi','info']];
+ const body={profil:setProfil,payment:setPayments,keamanan:setKeamanan,cs:setCS,info:setInfo}[S.setTab]||setProfil;
  return `
- ${pageHead('Settings','Kelola profil saya, keamanan akun, bantuan & informasi aplikasi.')}
+ ${pageHead('Settings','Kelola profil, payment, keamanan akun, bantuan & informasi aplikasi.')}
  <div class="settabs">
   ${tabs.map(([k,l,ic])=>`<button class="chip ${S.setTab===k?'on':''}" onclick="S.setTab='${k}';render()"><i data-lucide="${ic}" style="width:13px;height:13px"></i> ${l}</button>`).join('')}
   <button class="chip red" onclick="askLogout()"><i data-lucide="log-out" style="width:13px;height:13px"></i> Logout</button>
@@ -2296,12 +2806,12 @@ function setProfil(){
  const p=DB.profile,s=DB.shop;
  return `
  <div class="card" style="overflow:hidden;margin-bottom:16px">
-  <div style="height:150px;background:var(--soft2);position:relative" id="pfBgBox">
+  <div style="height:150px;background:var(--soft2);position:relative;overflow:hidden" id="pfBgBox">
    ${p.bg?`<img src="${p.bg}" style="width:100%;height:100%;object-fit:cover">`:''}
    <button class="btn gho sm" style="position:absolute;top:10px;right:10px;z-index:2" onclick="qs('#pfBg').click()"><i data-lucide="image-plus" style="width:13px;height:13px"></i> Ganti Background</button>
    <input id="pfBg" type="file" accept="image/*" class="hide" onchange="pickProfile(this,'pfBg')"></div>
   <div style="display:flex;align-items:flex-end;gap:14px;padding:0 20px 16px;margin-top:-32px;position:relative">
-   <div class="photopick" style="width:64px;height:64px;border:3px solid var(--card);background:var(--card)" onclick="qs('#pfPhoto').click()">
+   <div class="photopick ${p.photo?'has-img':''}" id="pfPhotoBox" style="width:64px;height:64px;border:3px solid var(--card);background:var(--card)" onclick="qs('#pfPhoto').click()">
     ${p.photo?`<img src="${p.photo}">`:`<i data-lucide="camera"></i>`}</div>
    <input id="pfPhoto" type="file" accept="image/*" class="hide" onchange="pickProfile(this,'pf')">
    <div style="padding-bottom:6px"><b style="font-size:17px">${esc(p.name)}</b>
@@ -2367,29 +2877,112 @@ function setProfil(){
   <input value="${esc(s.name)}" oninput="DB.shop.name=this.value;saveDB()" placeholder="Nama toko di aplikasi & fallback judul struk">
  </div>`;
 };
+/* ================= SETTINGS: PAYMENT ================= */
+function setPayments(){
+ const P=DB.payments,accs=P.transfer.accounts;
+ return `
+ <div class="card pad" style="margin-bottom:16px">
+  <div class="setrow">
+   <div class="in"><b>QRIS</b><small>Metode pembayaran scan e-wallet / m-banking</small></div>
+   <div class="sw ${P.qris.on?'on':''}" onclick="pmToggle('qris')"></div>
+  </div>
+  <label class="f">Foto QRIS <span class="code" style="font-weight:400">· Cloudinary</span></label>
+  <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+   <div class="pmImgBox ${P.qris.img?'has-img':''}" id="qrisBox" onclick="qs('#qrisIn').click()">
+    ${P.qris.img?`<img src="${P.qris.img}">`:`<i data-lucide="qr-code" style="width:20px;height:20px"></i><span>Upload QRIS</span>`}
+   </div>
+   <input id="qrisIn" type="file" accept="image/*" class="hide" onchange="pickQris(this)">
+   <div style="flex:1;min-width:180px">
+    <small style="font-size:11.5px;color:var(--tx2);line-height:1.6">${P.qris.img?'QRIS terpasang — gambar ini ditampilkan di modal pembayaran QRIS, menggantikan QR generator.':'Belum ada foto. Tanpa foto, sistem memakai QR generator otomatis.'}</small>
+    ${P.qris.img?`<div style="margin-top:8px"><button class="btn dng sm" onclick="delQris()"><i data-lucide="trash-2" style="width:13px;height:13px"></i> Hapus Foto</button></div>`:''}
+   </div>
+  </div>
+ </div>
+ <div class="card pad" style="margin-bottom:16px">
+  <div class="setrow">
+   <div class="in"><b>Debit / Card</b><small>Pembayaran via mesin EDC</small></div>
+   <div class="sw ${P.debit.on?'on':''}" onclick="pmToggle('debit')"></div>
+  </div>
+  <label class="f">Catatan Debit (opsional)</label>
+  <input value="${esc(P.debit.note||'')}" oninput="DB.payments.debit.note=this.value;saveDB()" placeholder="Contoh: Semua kartu debit &amp; credit diterima">
+ </div>
+ <div class="card pad">
+  <div class="setrow">
+   <div class="in"><b>Transfer Bank</b><small>${accs.length} rekening terdaftar</small></div>
+   <div class="sw ${P.transfer.on?'on':''}" onclick="pmToggle('transfer')"></div>
+  </div>
+  <div style="margin-top:12px">
+   ${accs.length?accs.map(a=>`<div class="tracc">
+    <span style="width:34px;height:34px;border-radius:9px;background:var(--selbg);color:var(--blue);display:inline-flex;align-items:center;justify-content:center;flex:none"><i data-lucide="landmark"></i></span>
+    <div style="flex:1;min-width:0"><b>${esc(a.bank)}</b><small class="mono" style="display:block">${esc(a.number)}</small><small style="color:var(--tx2)">a.n. ${esc(a.name)}</small></div>
+    <button class="ibtn" onclick="copyText('${esc(a.number)}')" title="Salin no. rekening"><i data-lucide="copy"></i></button>
+    <button class="ibtn red" onclick="trDel('${a.id}')"><i data-lucide="trash-2"></i></button></div>`).join('')
+   :'<div class="empty" style="padding:18px 8px"><i data-lucide="landmark"></i><p>Belum ada rekening transfer.</p></div>'}
+  </div>
+  <div class="blk-label" style="margin-top:16px">Tambah Rekening</div>
+  <div style="display:grid;grid-template-columns:150px 1fr;gap:10px">
+   <input id="trBank" placeholder="Nama Bank (BCA)">
+   <input id="trNumber" placeholder="Nomor Rekening" inputmode="numeric">
+  </div>
+  <input id="trName" placeholder="Nama Pemilik Rekening" style="margin-top:10px">
+  <button class="btn pri" style="margin-top:12px" onclick="trAdd()"><i data-lucide="plus" style="width:14px;height:14px"></i> Tambah Rekening</button>
+ </div>`;
+}
+function pmToggle(k){
+ DB.payments[k].on=!DB.payments[k].on;saveDB();render();
+ toast((DB.payments[k].on?'Diaktifkan':'Dimatikan')+': '+({qris:'QRIS',debit:'Debit / Card',transfer:'Transfer Bank'}[k]),DB.payments[k].on?'check-circle-2':'circle-slash');
+}
+async function pickQris(input){
+ const file=input.files[0];if(!file)return;
+ const box=qs('#qrisBox');if(!box)return;
+ const local=await fileToDataURL(file);
+ box.innerHTML=`<img src="${local}">`;box.classList.add('has-img');
+ const spin=document.createElement('div');
+ spin.className='upspin';spin.innerHTML='<span class="spin"></span> Mengunggah...';
+ box.appendChild(spin);
+ try{
+  const url=await cloudUpload(file);
+  DB.payments.qris.img=url;saveDB();spin.remove();
+  toast('Foto QRIS diperbarui & tersinkron.','qr-code');
+ }catch(e){spin.remove();toast('Upload gagal: '+(e.message||e),'alert-triangle',true)}
+}
+function delQris(){confirmModal('Hapus foto QRIS?','Modal pembayaran akan kembali memakai QR generator otomatis.','Ya, hapus',()=>{DB.payments.qris.img='';saveDB();render();toast('Foto QRIS dihapus.','trash-2')})}
+function trAdd(){
+ const bank=qv('#trBank'),number=qv('#trNumber'),name=qv('#trName');
+ if(bank.length<2)return toast('Isi nama bank.','alert-triangle',true);
+ if(number.replace(/\D/g,'').length<6)return toast('Nomor rekening tidak valid.','alert-triangle',true);
+ if(name.length<2)return toast('Isi nama pemilik rekening.','alert-triangle',true);
+ DB.payments.transfer.accounts.push({id:uid(),bank,number,name});
+ saveDB();render();toast('Rekening '+bank+' ditambahkan.','landmark');
+}
+function trDel(id){confirmModal('Hapus rekening ini?','Rekening akan dihilangkan dari pilihan transfer.','Ya, hapus',()=>{DB.payments.transfer.accounts=DB.payments.transfer.accounts.filter(a=>a.id!==id);saveDB();render();toast('Rekening dihapus.','trash-2')})}
+function copyText(t){if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(()=>toast('Disalin: '+t,'copy')).catch(()=>toast(t,'copy'));else toast(t,'copy')}
+
+/* FOTO PROFIL & BACKGROUND: preview instan + Cloudinary + Firestore */
 async function pickProfile(input,kind){
  const file=input.files[0];if(!file)return;
- const holder=input.parentNode;
+ const box=qs(kind==='pf'?'#pfPhotoBox':'#pfBgBox');
+ if(!box)return;
  const local=await fileToDataURL(file);
- if(kind==='pf'){holder.innerHTML=`<img src="${local}">`}
- else{
-  holder.style.position=holder.style.position||'relative';
-  holder.insertAdjacentHTML('afterbegin',`<img src="${local}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">`);
+ if(kind==='pf'){
+  box.innerHTML=`<img src="${local}">`;box.classList.add('has-img');
+  const av=qs('#hAvatar');if(av)av.innerHTML=`<img src="${local}">`;
+ }else{
+  box.innerHTML=`<img src="${local}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">`;
+  box.classList.add('has-img');
  }
  const spin=document.createElement('div');
  spin.className='upspin';spin.innerHTML='<span class="spin"></span> Mengunggah ke Cloudinary...';
- holder.appendChild(spin);
+ box.appendChild(spin);
  try{
   const url=await cloudUpload(file);
-  DB.profile[kind]=url;saveDB();
+  if(kind==='pf')DB.profile.photo=url;else DB.profile.bg=url;
+  saveDB();
   spin.remove();
-  if(kind==='pf'){qs('#hAvatar').innerHTML=`<img src="${url}">`;toast('Foto profil diperbarui & tersinkron.','image')}
-  else toast('Background diperbarui & tersinkron.','image');
-  render();
+  toast(kind==='pf'?'Foto profil diperbarui & tersinkron.':'Background diperbarui & tersinkron.','image');
  }catch(e){
   spin.remove();
   toast('Upload gagal: '+(e.message||e),'alert-triangle',true);
-  render();
  }
 }
 async function pickRcLogo(input){
@@ -2407,8 +3000,10 @@ function setKeamanan(){
  </div>
  <div class="card pad" style="margin-bottom:16px">
   <div class="blk-label">Ubah Password</div>
-  <label class="f">Password Lama</label><input id="oldPass" type="password" placeholder="••••••">
-  <label class="f">Password Baru</label><input id="newPass" type="password" placeholder="Minimal 6 karakter">
+  <label class="f">Password Lama</label>
+  <div class="pwwrap"><input id="oldPass" type="password" placeholder="••••••"><button type="button" class="pweye" onclick="pwToggle('oldPass',this)"><i data-lucide="eye"></i></button></div>
+  <label class="f">Password Baru</label>
+  <div class="pwwrap"><input id="newPass" type="password" placeholder="Minimal 6 karakter"><button type="button" class="pweye" onclick="pwToggle('newPass',this)"><i data-lucide="eye"></i></button></div>
   <button class="btn pri" style="margin-top:16px" onclick="changePass()"><i data-lucide="key-round" style="width:14px;height:14px"></i> Simpan Password Baru</button>
  </div>
  <div class="card pad">
@@ -2433,14 +3028,14 @@ function setInfo(){
  <div class="card pad" style="margin-bottom:16px;text-align:center">
   <div style="width:46px;height:46px;margin:6px auto 12px">${LOGO_SVG}</div>
   <b style="font-size:19px">BarberGo POS</b>
-  <div class="mono" style="font-size:10.5px;color:var(--tx3);margin-top:4px;letter-spacing:.14em">VERSI 3.3.0 · CLOUD EDITION</div>
-  <p style="font-size:12.5px;color:var(--tx2);line-height:1.7;margin-top:12px;max-width:440px;margin-left:auto;margin-right:auto">Tersambung penuh: <b>Firebase Auth</b> (login email), <b>Cloud Firestore</b> (data toko, reservasi &amp; chat real-time), dan <b>Cloudinary</b> (penyimpanan foto).</p>
+  <div class="mono" style="font-size:10.5px;color:var(--tx3);margin-top:4px;letter-spacing:.14em">VERSI 3.7.0 · CLOUD EDITION</div>
+  <p style="font-size:12.5px;color:var(--tx2);line-height:1.7;margin-top:12px;max-width:440px;margin-left:auto;margin-right:auto">Tersambung penuh: <b>Firebase Auth</b> (login email), <b>Cloud Firestore</b> (data toko, reservasi, chat &amp; payment), dan <b>Cloudinary</b> (penyimpanan foto).</p>
  </div>
  <div class="card pad">
   <div class="setrow"><div class="in"><b>1 · Data Tersinkron</b><small>Orderan, pelanggan, laporan &amp; pengaturan tersimpan di Firestore — multi perangkat</small></div></div>
-  <div class="setrow"><div class="in"><b>2 · Reservasi &amp; Booking</b><small>Reservasi web masuk otomatis — konfirmasi booking langsung membuat tiket antrian</small></div></div>
-  <div class="setrow"><div class="in"><b>3 · Chat Pelanggan</b><small>Menu Chat terhubung Firestore — balasanmu langsung diterima pelanggan</small></div></div>
-  <div class="setrow"><div class="in"><b>4 · Foto Profil &amp; Background</b><small>Settings → preview instan saat upload, tersimpan via Cloudinary</small></div></div>
+  <div class="setrow"><div class="in"><b>2 · Payment</b><small>Settings → Payment: atur QRIS (upload foto), Debit, Transfer — toggle on/off per metode</small></div></div>
+  <div class="setrow"><div class="in"><b>3 · Chat Pelanggan</b><small>Header terpisah · floating input navbar · typing indicator · jam di bubble · auto scroll</small></div></div>
+  <div class="setrow"><div class="in"><b>4 · Membership</b><small>4 tier (Bronze/Gold/Platinum/Black) · paket bulanan &amp; tahunan · search bar</small></div></div>
   <div class="setrow"><div class="in"><b>5 · Printer Bluetooth</b><small>Settings → Hubungkan Printer → Tes Cetak (ESC/POS 58mm)</small></div></div>
  </div>`;
 }
@@ -2500,6 +3095,11 @@ function sendCS(){if(qv('#csMsg').length<5)return toast('Tulis pesanmu dulu ya.'
  auth.onAuthStateChanged(async user=>{
   if(user&&shopRef===null){
    await startWithUser(user);
+  }else if(!user){
+   shopRef=null;DB=null;
+   qs('#app').classList.add('hide');
+   qs('#landing').classList.remove('hide');
+   showLgBox('#lgPlans');setLgNav('plans');
   }
  });
 })();
