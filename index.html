@@ -34,7 +34,7 @@
   >
 
   <meta name="theme-color" content="#0B2FD1">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="dark">
 
   <!-- =========================
        CANONICAL
@@ -76,7 +76,7 @@
   >
 
   <meta
-    name="mobile-web-app-capable"
+    name="mo=bile-web-app-capable"
     content="yes"
   >
 
@@ -730,6 +730,179 @@ body.kb-on .chat-room{position:fixed;left:0;right:0;top:0;height:var(--vvh,100vh
  body.chat-lock .chat-room{height:100%!important}
  body.chat-lock #view{padding-bottom:16px}
 }
+
+/* ================= PREMIUM NATIVE-APP PASS ================= */
+:root{
+  --blue:#6D8CFF;--blue2:#89A2FF;--bluesoft:#1B2744;
+  --bk:#070A10;--bg:#090D14;--card:#101722;--tx:#F2F5FA;
+  --tx2:#9BA8BA;--tx3:#69788D;--bd:#263244;--line:#1D2939;
+  --hov:#192436;--hov2:#0D141F;--soft:#172233;--soft2:#202D40;
+  --soft3:#0D1521;--input:#0B121D;--selbg:rgba(109,140,255,.14);
+  --gr:#36C995;--wn:#F2B65D;--dn:#FF6B78;--r:16px;
+  --sh:0 8px 28px rgba(0,0,0,.18)
+}
+body{background:var(--bg);color:var(--tx);letter-spacing:-.01em}
+body:not(.dark){--blue:#6D8CFF;--blue2:#89A2FF;--bluesoft:#1B2744;--bk:#070A10;--bg:#090D14;--card:#101722;--tx:#F2F5FA;--tx2:#9BA8BA;--tx3:#69788D;--bd:#263244;--line:#1D2939;--hov:#192436;--hov2:#0D141F;--soft:#172233;--soft2:#202D40;--soft3:#0D1521;--input:#0B121D;--selbg:rgba(109,140,255,.14);--gr:#36C995;--wn:#F2B65D;--dn:#FF6B78;--sh:0 8px 28px rgba(0,0,0,.18)}
+#sidebar,#header,#lgNav{background:rgba(15,22,33,.96);border-color:var(--bd);backdrop-filter:blur(18px)}
+#sidebar{border-right:1px solid var(--bd)}
+#header{border-bottom:1px solid var(--bd)}
+.main{background:radial-gradient(ellipse at 80% 0%,rgba(70,100,180,.08),transparent 34%),var(--bg)}
+.card,.orderP,.qtk{border-color:rgba(112,134,166,.18);box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.btn,.ibtn,.hbtn,.chip,.hchip,.sitem,.conv,.pm,.svc-card{transition:background .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn.pri{background:linear-gradient(135deg,#6D8CFF,#526FF0);box-shadow:0 6px 18px rgba(82,111,240,.2)}
+.btn.pri:hover{transform:translateY(-1px);box-shadow:0 9px 22px rgba(82,111,240,.28)}
+.sitem.active{color:#AFC0FF;background:rgba(109,140,255,.12)}
+.sitem.active svg{color:#AFC0FF}
+.sitem.active::before{background:#7894FF}
+input,select,textarea{border-radius:11px}
+input:focus,select:focus,textarea:focus{border-color:#6D8CFF;box-shadow:0 0 0 3px rgba(109,140,255,.13)}
+#view{padding:26px;max-width:1600px}
+.phead h1{font-size:27px;letter-spacing:-.045em}
+.phead p{color:#9BA8BA}
+.kpi,.revcard{border-radius:16px}
+.kpi .val{letter-spacing:-.05em}
+.tbl th{color:#8998AD}
+.tbl td{height:58px}
+#modalRoot .modal{background:#111A27;border-color:#2A374A;box-shadow:0 24px 90px rgba(0,0,0,.45)}
+#drawerR{background:#101722;border-color:#263244}
+#scrim{background:rgba(2,5,10,.72);backdrop-filter:blur(4px)}
+/* Messaging workspace */
+.chat-wrap{grid-template-columns:minmax(290px,350px) minmax(0,1fr);gap:14px;height:calc(100dvh - 116px);min-height:520px}
+.chat-list,.chat-room{background:#0E1520;border:1px solid #263244;border-radius:18px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,.16)}
+.cl-head{padding:18px 16px 14px;background:#101925;border-bottom:1px solid #202D3F}
+.cl-head .srch input{height:43px;background:#0A111B;border-color:#273448;border-radius:12px;padding-left:38px}
+.cl-head .srch>svg{left:13px}
+.cl-scroll{padding:8px}
+.conv{padding:12px;border:1px solid transparent;border-radius:13px;gap:12px;margin:2px 0}
+.conv:hover{background:#151F2D}
+.conv.active{background:linear-gradient(100deg,rgba(109,140,255,.15),rgba(109,140,255,.05));border-color:rgba(109,140,255,.23)}
+.conv .r1 b{font-size:13px;font-weight:650;letter-spacing:-.015em}
+.conv .tm{font-size:10px;color:#7D8BA0}
+.conv .pv{font-size:11.5px;color:#95A3B7}
+.unb{background:#6D8CFF;min-width:19px;height:19px;font-size:10px}
+.chat-room{position:relative;background:#0A111B}
+.cr-head{padding:15px 20px;background:rgba(16,24,36,.97);border-bottom:1px solid #263244;box-shadow:0 5px 18px rgba(0,0,0,.12);gap:13px}
+.cr-head .cr-back{width:34px;height:34px;align-items:center;justify-content:center;border:1px solid #2A374A;border-radius:10px;color:#B8C4D5}
+.msgs{padding:22px 24px 108px;gap:11px;background:
+ radial-gradient(ellipse at 50% 0%,rgba(66,91,145,.08),transparent 48%),#0A111B}
+.bub{max-width:min(72%,560px);padding:11px 14px;border-radius:15px;font-size:13px;line-height:1.55;box-shadow:0 3px 12px rgba(0,0,0,.08);overflow-wrap:anywhere}
+.bub.me{background:linear-gradient(135deg,#607FF5,#4D68D8);border:1px solid rgba(166,184,255,.18);border-bottom-right-radius:5px;color:#fff}
+.bub.cust{background:#172231;border:1px solid #29374A;border-bottom-left-radius:5px;color:#E6ECF5}
+.bub .bt{font-size:9.5px;letter-spacing:.01em;margin-top:6px;opacity:.78}
+.chat-inp{left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));padding:7px 7px 7px 16px;background:rgba(17,26,39,.97);border:1px solid #304057;border-radius:17px;box-shadow:0 12px 34px rgba(0,0,0,.35);gap:9px;backdrop-filter:blur(18px)}
+.chat-inp input{color:#F2F5FA;font-size:15px;padding:10px 5px}
+.chat-inp input::placeholder{color:#728198}
+.chat-inp .send-btn{width:43px;height:43px;border-radius:13px;background:linear-gradient(135deg,#6D8CFF,#526FF0);box-shadow:0 5px 14px rgba(82,111,240,.25)}
+.chat-inp .send-btn svg{width:18px;height:18px}
+.chat-empty{padding:28px;background:radial-gradient(circle,rgba(109,140,255,.09),transparent 60%)}
+.chat-empty>svg{width:54px!important;height:54px!important;padding:14px;border-radius:17px;background:#172338;color:#91A8FF;opacity:1!important;margin-bottom:4px}
+.chat-empty p{line-height:1.7;color:#9BA8BA}
+.typing{background:#172231;border-color:#2B3A4F;color:#AAB7CA}
+.msg-pill{background:#526FF0;box-shadow:0 8px 22px rgba(82,111,240,.28)}
+.blocked-bar{background:rgba(255,107,120,.08)}
+.ctx{background:#111A27;border-color:#2A374A;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+/* Remove playful/emoji-style controls in favor of consistent outline iconography */
+button[aria-label*="emoji" i],button[title*="emoji" i],.emoji-btn,.emoji-picker{display:none!important}
+svg.lucide{stroke-width:1.8}
+@media(max-width:900px){
+ #view{padding:16px}
+ .chat-wrap{grid-template-columns:minmax(0,1fr);height:auto;min-height:0;gap:12px}
+ .chat-list{max-height:360px;min-height:200px}
+ .cl-scroll{max-height:270px}
+ .chat-room{min-height:56vh;height:56vh}
+ body.chat-lock .chat-wrap{height:calc(100dvh - 64px)}
+ body.chat-lock .chat-list{display:none}
+ body.chat-lock .chat-room{height:100%!important;min-height:0;border-radius:0}
+ .msgs{padding:18px 14px 104px}
+ .cr-head{padding:12px 14px}
+ .chat-inp{left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+ .bub{max-width:86%;font-size:13px}
+}
+@media(max-width:520px){
+ #view{padding:12px}
+ .chat-list,.chat-room{border-radius:15px}
+ .cl-head{padding:13px}
+ .conv{padding:10px}
+ .cr-head{gap:10px}
+ .msgs{gap:9px}
+ .bub{padding:10px 12px}
+ .phead h1{font-size:23px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+}
+
+
+/* ===== PATCH v2: chat room full-screen + kasbon unified expense ledger ===== */
+body.chat-lock .chat-wrap,
+body.chat-lock #mainContent .chat-wrap,
+body.chat-lock .page-content .chat-wrap {
+  display:block !important;
+  position:static !important;
+  width:100% !important;
+  height:100dvh !important;
+  min-height:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+body.chat-lock .chat-room,
+body.chat-lock #chatRoomPanel {
+  position:fixed !important;
+  inset:0 !important;
+  z-index:9999 !important;
+  width:100vw !important;
+  height:100dvh !important;
+  min-height:0 !important;
+  max-height:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  overflow:hidden !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  background:var(--bg) !important;
+  transform:none !important;
+}
+body.chat-lock .cr-head {
+  flex:0 0 auto !important;
+  padding:calc(12px + env(safe-area-inset-top, 0px)) 16px 12px !important;
+  min-height:68px;
+  background:var(--card) !important;
+}
+body.chat-lock .msgs {
+  flex:1 1 0 !important;
+  min-height:0 !important;
+  height:auto !important;
+  overflow-y:auto !important;
+  padding:18px 16px calc(100px + env(safe-area-inset-bottom, 0px)) !important;
+}
+body.chat-lock .chat-inp {
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  z-index:10 !important;
+  margin:0 !important;
+  padding:12px 14px calc(12px + env(safe-area-inset-bottom, 0px)) !important;
+  background:linear-gradient(180deg, transparent, var(--bg) 18%) !important;
+}
+body.chat-lock.kb-on .chat-room,
+body.kb-on body.chat-lock .chat-room {
+  height:var(--vvh, 100dvh) !important;
+  transform:translateY(var(--vvoff, 0px)) !important;
+}
+body.chat-lock .chat-list { display:none !important; }
+body.chat-lock #chatRoomPanel .msgs::-webkit-scrollbar { width:4px; }
+@media (min-width:760px) {
+  body.chat-lock .chat-room,
+  body.chat-lock #chatRoomPanel { width:100vw !important; }
+  body.chat-lock .cr-head { padding-left:24px !important; padding-right:24px !important; }
+  body.chat-lock .msgs { padding-left:clamp(20px, 5vw, 80px) !important; padding-right:clamp(20px, 5vw, 80px) !important; }
+  body.chat-lock .chat-inp { padding-left:clamp(20px, 5vw, 80px) !important; padding-right:clamp(20px, 5vw, 80px) !important; }
+}
+
 </style>
 </head>
 <body>
@@ -1185,7 +1358,7 @@ function updateChatLock(){
 
 /* ★ BUKA / TUTUP ROOM */
 function openChatRoom(tid){
- S.page='chat';S.chatTid=tid;
+ S.page='chat';S.chatTid=tid;document.body.classList.add('chat-lock');
  CHAT_SEEN[tid]=Date.now();delete CHAT_UNREAD[tid];saveChatSeen();
  closePanels();closeChatCtx();
  render();
@@ -1446,11 +1619,10 @@ function renderProfileMenu(){
   <button class="dd-item" onclick="qsa('.dd.open').forEach(x=>x.classList.remove('open'));go('settings')"><i data-lucide="user-round"></i> Profil Saya</button>
   <button class="dd-item" onclick="qsa('.dd.open').forEach(x=>x.classList.remove('open'));S.setTab='payment';go('settings')"><i data-lucide="wallet"></i> Payment</button>
   <button class="dd-item" onclick="qsa('.dd.open').forEach(x=>x.classList.remove('open'));S.setTab='keamanan';go('settings')"><i data-lucide="shield-check"></i> Keamanan</button>
-  <button class="dd-item" onclick="toggleTheme()"><i data-lucide="${dark?'sun':'moon'}"></i> Mode ${dark?'Terang':'Gelap'}</button>
   <div class="dd-sep"></div>
   <button class="dd-item" onclick="askLogout()" style="color:var(--dn)"><i data-lucide="log-out"></i> Keluar</button>`;
 }
-function applyTheme(){const t=localStorage.getItem('bg_theme')||'light';document.body.classList.toggle('dark',t==='dark')}
+function applyTheme(){const t=localStorage.getItem('bg_theme')||'dark';document.body.classList.toggle('dark',t==='dark')}
 function toggleTheme(){const dark=document.body.classList.toggle('dark');localStorage.setItem('bg_theme',dark?'dark':'light');buildSidebar();renderProfileMenu();toast('Mode '+(dark?'gelap':'terang')+' aktif.',dark?'moon':'sun')}
 
 /* ================= SIDEBAR ================= */
@@ -1472,20 +1644,11 @@ function buildSidebar(){
  const req=(DB.planRequests||[]).filter(r=>r.status==='pending').sort((a,b)=>b.at-a.at)[0];
  const planLabel=req?`<span class="pf-l">Pengajuan Aktif</span><div class="pf-n" style="font-size:12.5px">${esc(req.toName)} <span class="badge b-pend" style="margin-left:2px">Diproses</span></div>`
   :`<span class="pf-l">Paket Digunakan</span><div class="pf-n">${pl.name} <span class="pf-d">· ${pl.dur}</span></div>`;
- qs('#sideTheme').innerHTML=`<button class="themeRow" onclick="toggleTheme()">
-   <span class="tic"><i data-lucide="${dark?'sun':'moon'}"></i></span>
-   <span><b>Mode ${dark?'Terang':'Gelap'}</b><small>Ketuk untuk beralih</small></span>
-   <span class="sw ${dark?'on':''}"></span></button>
-  <div class="planFoot">
+ qs('#sideTheme').innerHTML=`<div class="planFoot">
    <span class="pf-l">Printer Bluetooth</span>
    <div class="pf-n" style="font-size:12.5px">${PRINTER.connected?esc(PRINTER.name):'Belum terhubung'} <span class="badge ${PRINTER.connected?'b-paid':'b-gray'}" style="margin-left:2px">${PRINTER.connected?'Online':'Offline'}</span></div>
    <div class="pf-f">${PRINTER.connected?'Siap mencetak struk via Bluetooth.':'Hubungkan printer thermal di menu Settings.'}</div>
    <button class="btn ${PRINTER.connected?'gho':'pri'}" onclick="go('settings');S.setTab='profil';render()"><i data-lucide="bluetooth" style="width:13px;height:13px"></i> ${PRINTER.connected?'Kelola Printer':'Hubungkan Printer'}</button>
-  </div>
-  <div class="planFoot">
-   ${planLabel}
-   <div class="pf-f">${req?'Diajukan '+fdate(req.at)+', '+ftime(req.at)+' — menunggu konfirmasi admin.':pl.feat}</div>
-   <button class="btn ${PRINTER.connected?'pri':'gho'}" onclick="upgradeModal()"><i data-lucide="rocket" style="width:13px;height:13px"></i> ${req?'Lihat Pengajuan':'Upgrade Paket'}</button>
   </div>
   <div class="cloudRow"><span class="cdot2"></span>Firestore · Cloudinary tersambung</div>`;
  const unseen=(waitingCount()||unreadChatCount()||notifItems().filter(n=>n.unseen).length);
@@ -1750,7 +1913,14 @@ function posAddItem(kind,id){
 }
 function posQty(idx,d){const it=CART.items[idx];it.qty+=d;if(it.qty<=0)CART.items.splice(idx,1);posRenderItems();posRenderOrder()}
 function posRm(idx){CART.items.splice(idx,1);posRenderItems();posRenderOrder()}
-function posDisc(v){CART.disc=Math.max(0,parseInt(v)||0);posRenderOrder(true)}
+function posDisc(v){
+ const raw=Math.max(0,parseInt(v,10)||0);
+ const max=Math.max(0,cartSub()-Math.round(cartSub()*custPct(CART.cust)));
+ CART.disc=Math.min(raw,max);
+ posRenderOrder(true);
+ const inp=qs('#posDiscIn');
+ if(inp){inp.value=CART.disc||'';inp.max=max;inp.title='Potongan maksimal '+fmt(max)}
+}
 function posClearAll(){CART={cust:null,cap:CART.cap,items:[],disc:0};posRenderItems();posRenderCust();posRenderOrder()}
 function posRenderOrder(keepFocus){
  const T=cartTotals();const c=CART.cust;
@@ -1770,7 +1940,7 @@ function posRenderOrder(keepFocus){
   <div style="margin-top:10px">
    <div class="sumline"><span>Subtotal</span><b>${fmt(T.sub)}</b></div>
    ${T.mem?`<div class="sumline"><span>Membership Discount (${custPct(c)*100}%)</span><b style="color:var(--gr)">- ${fmt(T.mem)}</b></div>`:''}
-   <div class="sumline"><span>Discount</span><input type="number" id="posDiscIn" value="${CART.disc||''}" placeholder="0" style="width:110px;text-align:right;padding:5px 9px" oninput="posDisc(this.value)"></div>
+   <div class="sumline"><span>Potongan harga (Rp)</span><input type="number" id="posDiscIn" value="${CART.disc||''}" min="0" max="${Math.max(0,T.sub-T.mem)}" step="1000" inputmode="numeric" aria-label="Nominal potongan harga dalam rupiah" placeholder="Masukkan nominal" style="width:145px;text-align:right;padding:7px 9px" oninput="posDisc(this.value)"></div>
    <div class="sumtot"><span>Total</span><b>${fmt(T.total)}</b></div>
   </div>
   <button class="btn pri lg" style="margin-top:14px" ${canDo?'':'disabled'} onclick="posCreateOrder()"><i data-lucide="clipboard-list" style="width:16px;height:16px"></i> BUAT ORDERAN</button>
@@ -2420,6 +2590,11 @@ VIEWS.revenue=()=>{
   <div class="card kpi"><span class="lab">Laba Bersih</span><span class="val">${sRp(M.net)}</span><span class="sub">setelah kasbon ${sRp(M.kas)}</span></div>
   <div class="card kpi"><span class="lab">Total Customer</span><span class="val">${M.cust}</span><span class="sub">${S.calSel?fdateL(new Date(S.calSel)):MONL[m]+' '+y}</span></div>
  </div>
+ <div class="grid g3" style="margin-bottom:16px">
+  <div class="card pad"><div class="blk-label">Pengeluaran operasional</div><div class="val" style="color:var(--dn)">${sRp(M.exp)}</div><small style="color:var(--tx2)">Total pengeluaran pada periode terpilih</small></div>
+  <div class="card pad"><div class="blk-label">Kasbon staff &amp; capster</div><div class="val" style="color:var(--warn)">${sRp(M.kas)}</div><small style="color:var(--tx2)">Total kasbon pada periode terpilih</small></div>
+  <div class="card pad"><div class="blk-label">Total pengurang laba</div><div class="val" style="color:var(--dn)">${sRp(M.exp+M.kas)}</div><small style="color:var(--tx2)">Pengeluaran + kasbon</small></div>
+ </div>
  <div class="grid g2" style="grid-template-columns:300px 1fr;margin-bottom:16px">
   <div class="card pad">
    <div class="chead"><button class="ibtn" onclick="calMove(-1)"><i data-lucide="chevron-left"></i></button><b style="font-size:13.5px">${MONL[m]} ${y}</b><button class="ibtn" onclick="calMove(1)"><i data-lucide="chevron-right"></i></button></div>
@@ -2470,7 +2645,18 @@ function exportCSV(){
 /* ---------- PENGELUARAN ---------- */
 VIEWS.expenses=()=>{
  const mKey=todayKey().slice(0,7);
- const list=[...DB.expenses].sort((a,b)=>b.at-a.at);
+ // Satukan biaya operasional dan pencairan kasbon dalam satu riwayat.
+ // Data kasbon tetap tersimpan terpisah agar perhitungan laporan tidak terhitung ganda.
+ const list=[
+  ...DB.expenses.map(e=>({...e,recordType:'expense'})),
+  ...DB.kasbon.map(k=>{
+   const member=(k.memberType==='capster'?DB.capsters:DB.staff).find(x=>x.id===(k.memberId||k.staffId))
+     || DB.staff.find(x=>x.id===k.staffId)
+     || DB.capsters.find(x=>x.id===k.staffId)
+     || {name:'Anggota tim'};
+   return {id:k.id,name:'Kasbon — '+member.name,amount:k.amount,at:k.at,recordType:'kasbon'};
+  })
+ ].sort((a,b)=>b.at-a.at);
  const tot=list.filter(e=>dkey(e.at).startsWith(mKey)).reduce((a,b)=>a+b.amount,0);
  return `
  ${pageHead('Pengeluaran','Catat biaya operasional — otomatis masuk perhitungan laba.')}
@@ -2484,9 +2670,9 @@ VIEWS.expenses=()=>{
   <div class="card pad">
    <div class="chead"><h3>Riwayat</h3><span class="code">${list.length} catatan</span></div>
    ${list.length?list.map(e=>`<div class="rrow">
-    <div class="in"><b>${esc(e.name)}</b><small>${fdate(e.at)} · ${ftime(e.at)}</small></div>
+    <div class="in"><b>${esc(e.name)}</b><small>${e.recordType==='kasbon'?'Kasbon staff/capster':'Biaya operasional'} · ${fdate(e.at)} · ${ftime(e.at)}</small></div>
     <span class="amt" style="color:var(--dn)">− ${fmt(e.amount)}</span>
-    <button class="ibtn red" onclick="expDel('${e.id}')"><i data-lucide="trash-2"></i></button></div>`).join('')
+    <button class="ibtn red" aria-label="Hapus ${e.recordType==='kasbon'?'kasbon':'pengeluaran'}" onclick="${e.recordType==='kasbon'?`kbDel('${e.id}')`:`expDel('${e.id}')`}"><i data-lucide="trash-2"></i></button></div>`).join('')
    :'<div class="empty"><i data-lucide="wallet"></i><p>Belum ada pengeluaran.</p></div>'}
    <div class="totalstrip"><span>Total bulan ini</span><b class="mono">${fmt(tot)}</b></div>
   </div>
@@ -2509,16 +2695,19 @@ VIEWS.kasbon=()=>{
  <div class="grid g2" style="grid-template-columns:1fr 1.4fr">
   <div class="card pad">
    <div class="blk-label">Beri Kasbon</div>
-   <label class="f">Pilih Staf</label>
-   <select id="kbStaff">${DB.staff.map(s=>`<option value="${s.id}">${esc(s.name)} — ${esc(s.role)}</option>`).join('')||'<option value="">— tambah staff dulu —</option>'}</select>
+   <label class="f">Pilih Staff / Capster</label>
+   <select id="kbStaff">
+    <optgroup label="Staff">${DB.staff.map(s=>`<option value="staff:${s.id}">${esc(s.name)} — ${esc(s.role||'Staff')}</option>`).join('')||'<option value="" disabled>Belum ada staff</option>'}</optgroup>
+    <optgroup label="Capster">${DB.capsters.map(c=>`<option value="capster:${c.id}">${esc(c.name)} — Capster</option>`).join('')||'<option value="" disabled>Belum ada capster</option>'}</optgroup>
+   </select>
    <label class="f">Jumlah Kasbon (Rp)</label><input id="kbAmount" type="number" placeholder="500000">
    <button class="btn pri lg" style="margin-top:16px" onclick="kbAdd()"><i data-lucide="hand-coins" style="width:15px;height:15px"></i> Catat Kasbon</button>
   </div>
   <div class="card pad">
    <div class="chead"><h3>Riwayat Kasbon</h3></div>
-   ${list.length?list.map(k=>{const s=DB.staff.find(x=>x.id===k.staffId)||{name:'—',role:''};
+   ${list.length?list.map(k=>{const s=(k.memberType==='capster'?DB.capsters:DB.staff).find(x=>x.id===(k.memberId||k.staffId))||DB.staff.find(x=>x.id===k.staffId)||DB.capsters.find(x=>x.id===k.staffId)||{name:'—',role:''};
     return `<div class="rrow">${avatarHTML(s.photo,s.name,38)}
-    <div class="in"><b>${esc(s.name)}</b><small>${esc(s.role)} · ${fdate(k.at)}</small></div>
+    <div class="in"><b>${esc(s.name)}</b><small>${k.memberType==='capster'?'Capster':esc(s.role||'Staff')} · ${fdate(k.at)}</small></div>
     <span class="amt" style="color:var(--dn)">− ${fmt(k.amount)}</span>
     <button class="ibtn red" onclick="kbDel('${k.id}')"><i data-lucide="trash-2"></i></button></div>`}).join('')
    :'<div class="empty"><i data-lucide="hand-coins"></i><p>Belum ada kasbon.</p></div>'}
@@ -2527,10 +2716,12 @@ VIEWS.kasbon=()=>{
  </div>`;
 };
 function kbAdd(){
- const staffId=qv('#kbStaff'),amount=parseInt(qv('#kbAmount'));
- if(!staffId)return toast('Tambahkan data staff dulu.','alert-triangle',true);
+ const selected=qv('#kbStaff'),amount=parseInt(qv('#kbAmount'));
+ if(!selected)return toast('Tambahkan data staff atau capster dulu.','alert-triangle',true);
  if(!amount||amount<1000)return toast('Jumlah kasbon tidak valid.','alert-triangle',true);
- DB.kasbon.push({id:uid(),staffId,amount,at:Date.now()});saveDB();render();toast('Kasbon '+fmt(amount)+' tercatat.');
+ const parts=selected.split(':'),memberType=parts[0]==='capster'?'capster':'staff',memberId=parts.slice(1).join(':');
+ DB.kasbon.push({id:uid(),staffId:memberId,memberId,memberType,amount,at:Date.now()});
+ saveDB();render();toast('Kasbon '+fmt(amount)+' tercatat dan muncul di Pengeluaran.');
 }
 function kbDel(id){confirmModal('Hapus catatan kasbon?','Data akan dihapus dari laporan.','Ya, hapus',()=>{DB.kasbon=DB.kasbon.filter(k=>k.id!==id);saveDB();render();toast('Kasbon dihapus.','trash-2')})}
 
@@ -2616,6 +2807,7 @@ function convClick(tid){if(LP.suppress){LP.suppress=false;return}openChatRoom(ti
 function convCtx(e,tid){e.preventDefault();convPressCancel();LP.suppress=true;openChatCtx(tid,e.clientX,e.clientY)}
 document.addEventListener('click',e=>{if(!e.target.closest('#chatCtx'))closeChatCtx()});
 window.addEventListener('scroll',closeChatCtx,true);
+ window.addEventListener('keydown',e=>{if(e.key==='Escape')closeChatCtx()});
 
 /* ★ MENU KONTEKS: Hapus / Blokir / Lapor */
 function openChatCtx(tid,x,y){
@@ -2706,8 +2898,9 @@ function chatRoomHTML(){
  </div>`;
 }
 function chatHeadMenu(e,tid){
- const b=e.currentTarget.getBoundingClientRect();
- openChatCtx(tid,b.left,b.bottom+6);
+ if(e){e.preventDefault();e.stopPropagation()}
+ const b=e&&e.currentTarget?e.currentTarget.getBoundingClientRect():{left:window.innerWidth-220,bottom:70};
+ openChatCtx(tid,Math.max(8,Math.min(b.left,window.innerWidth-220)),b.bottom+6);
 }
 
 /* ★ SCROLL: auto ke pesan terbaru + tombol pill */
@@ -2791,9 +2984,23 @@ function sendShopMsg(){
 }
 
 /* ---------- SETTINGS ---------- */
+function setAppearance(){
+ const dark=document.body.classList.contains('dark');
+ return `<div class="card pad" style="margin-bottom:16px">
+  <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
+   <div class="tic" style="width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--soft2);color:var(--tx2)"><i data-lucide="palette"></i></div>
+   <div><h3 style="margin:0 0 4px;font-size:16px">Tampilan aplikasi</h3><p style="margin:0;color:var(--tx2);font-size:12px">Atur tema BarberGo Kasflow sesuai kenyamananmu.</p></div>
+  </div>
+  <button class="themeRow" style="border:1px solid var(--bd);padding:14px;width:100%" onclick="toggleTheme();render()">
+   <span class="tic"><i data-lucide="${dark?'moon':'sun'}"></i></span>
+   <span style="flex:1;text-align:left"><b>Mode ${dark?'Gelap':'Terang'}</b><small>${dark?'Tema gelap sedang aktif':'Tema terang sedang aktif'} · Ketuk untuk beralih</small></span>
+   <span class="sw ${dark?'on':''}"></span>
+  </button>
+ </div>`;
+}
 VIEWS.settings=()=>{
- const tabs=[['profil','Edit Profile','user-round'],['payment','Payment','wallet'],['keamanan','Keamanan','shield-check'],['cs','Customer Service','headphones'],['info','Informasi','info']];
- const body={profil:setProfil,payment:setPayments,keamanan:setKeamanan,cs:setCS,info:setInfo}[S.setTab]||setProfil;
+ const tabs=[['profil','Edit Profile','user-round'],['payment','Payment','wallet'],['appearance','Tampilan','palette'],['keamanan','Keamanan','shield-check'],['cs','Customer Service','headphones'],['info','Informasi','info']];
+ const body={profil:setProfil,payment:setPayments,appearance:setAppearance,keamanan:setKeamanan,cs:setCS,info:setInfo}[S.setTab]||setProfil;
  return `
  ${pageHead('Settings','Kelola profil, payment, keamanan akun, bantuan & informasi aplikasi.')}
  <div class="settabs">
@@ -2817,6 +3024,17 @@ function setProfil(){
    <div style="padding-bottom:6px"><b style="font-size:17px">${esc(p.name)}</b>
     <div class="mono" style="font-size:11px;color:var(--tx2)">${esc(DB.email)} · Paket ${(DB.plan||'gold').toUpperCase()}</div></div></div>
   <div style="padding:0 20px 14px;font-size:11.5px;color:var(--tx2)">Ketuk avatar atau tombol <b>Ganti Background</b> — preview langsung muncul, lalu foto diunggah ke Cloudinary &amp; tersimpan ke Firestore.</div>
+ </div>
+ <div class="card pad" style="margin-bottom:16px">
+  <div class="blk-label">Paket yang digunakan</div>
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:8px">
+   <div>
+    <div style="font-size:20px;font-weight:800;display:flex;align-items:center;gap:8px">${planLabel}</div>
+    <p style="font-size:12px;color:var(--tx2);margin:7px 0 0">${req?'Pengajuan upgrade sedang menunggu konfirmasi.':pl.feat}</p>
+    <small style="display:block;color:var(--tx3);margin-top:5px">${req?'Diajukan '+fdate(req.at)+', '+ftime(req.at):'Paket aktif pada akun ini'}</small>
+   </div>
+   <button class="btn pri" onclick="upgradeModal()"><i data-lucide="rocket" style="width:14px;height:14px"></i> ${req?'Lihat Pengajuan':'Upgrade Paket'}</button>
+  </div>
  </div>
  <div class="card pad" style="margin-bottom:16px">
   <div class="blk-label">Edit Profil &amp; Toko</div>
