@@ -3011,6 +3011,13 @@ VIEWS.settings=()=>{
 };
 function setProfil(){
  const p=DB.profile,s=DB.shop;
+ // Paket aktif dan pengajuan upgrade untuk kartu profil.
+ // Scope buildSidebar() terpisah, jadi variabel harus didefinisikan di sini.
+ const pl=PLANS.find(p=>p.id===(DB.plan||'gold'))||PLANS[1]||{name:'Gold',dur:'',feat:''};
+ const req=(DB.planRequests||[]).filter(r=>r.status==='pending').sort((a,b)=>(b.at||0)-(a.at||0))[0];
+ const planLabel=req
+  ? `<span class="pf-l">Pengajuan Aktif</span><div class="pf-n" style="font-size:12.5px">${esc(req.toName)} <span class="badge b-pend" style="margin-left:2px">Diproses</span></div>`
+  : `<span class="pf-l">Paket Digunakan</span><div class="pf-n">${esc(pl.name)} <span class="pf-d">· ${esc(pl.dur||'')}</span></div>`;
  return `
  <div class="card" style="overflow:hidden;margin-bottom:16px">
   <div style="height:150px;background:var(--soft2);position:relative;overflow:hidden" id="pfBgBox">
